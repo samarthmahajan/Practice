@@ -1,0 +1,17 @@
+# Compiled Java
+*.class
+
+# Build output
+out/
+target/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Claude local settings (CLAUDE.md, skills, plans stay tracked)
+.claude/settings.local.json
+
+# OS
+.DS_Store

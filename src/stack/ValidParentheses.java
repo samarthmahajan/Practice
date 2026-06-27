@@ -1,0 +1,40 @@
+package stack;
+
+import java.util.Stack;
+
+/**
+ * LeetCode #20 - Valid Parentheses
+ * https://leetcode.com/problems/valid-parentheses/
+ *
+ * Given a string containing '(', ')', '{', '}', '[', ']',
+ * determine if the input string is valid.
+ *
+ * Time:  O(n)
+ * Space: O(n)
+ */
+public class ValidParentheses {
+
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } else {
+                if (stack.isEmpty()) return false;
+                char top = stack.pop();
+                if (c == ')' && top != '(') return false;
+                if (c == '}' && top != '{') return false;
+                if (c == ']' && top != '[') return false;
+            }
+        }
+        return stack.isEmpty();
+    }
+
+    // --- Test ---
+    public static void main(String[] args) {
+        ValidParentheses sol = new ValidParentheses();
+        System.out.println(sol.isValid("()[]{}"));  // true
+        System.out.println(sol.isValid("(]"));      // false
+        System.out.println(sol.isValid("{[]}"));    // true
+    }
+}
