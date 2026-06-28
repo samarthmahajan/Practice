@@ -95,7 +95,11 @@ DP gets ~2.5 weeks (8–10). Protect it — don't let earlier topics bleed into 
 - **Redo cold (2026-06-26):** Implement Queue using Stacks (Bridge) — `~` 2026-06-23.
 - **Redo cold (2026-06-27):** Valid Anagram (Arrays & Hashing) — `~` 2026-06-24 (off-by-one loop bound; symmetric tests hid it); Group Anagrams (Arrays & Hashing) — `~` 2026-06-24 (int[]-as-key steer; concept was cold, key-precision was the gap); Top K Frequent Elements (Arrays & Hashing) — `~` 2026-06-24 (nudged off O(n log n) sort to bucket-sort; selection-recognition was the gap).
 - **Redo cold (2026-06-28):** Product of Array Except Self — `~` 2026-06-25 (level-1 hint used).
-- **Next new problem:** Week 2 — Arrays & Hashing: **Encode/Decode Strings** (Product of Array Except Self ~ assisted 2026-06-25).
+- **Redo cold (2026-06-30):** Encode/Decode Strings — `~` 2026-06-27 (level-1 hint used to reach the length-prefix idea; encode/decode + invariant then clean, bug-free first run).
+- **Redo cold (2026-06-30):** Longest Consecutive Sequence — `~` 2026-06-27 (hint + Socratic unpacking to reach start-point invariant; correct, but iterated the array not the set → duplicate run-tops re-walk → O(n²). Fix: iterate the set).
+- **Redo cold (2026-06-30):** Two Sum II (sorted) — `~` 2026-06-27 (reached for HashMap first; needed steer to exploit sorted + O(1) two-pointer. Execution clean once redirected; the miss was recognition).
+- **Redo cold (2026-06-30):** 3Sum — `~` 2026-06-27 (recognition cold & correct: sort+anchor+two-pointer; but 2 invariant bugs — dedup entirely missing + reset lo not hi → stale pointer dropped triplets; passed samples, failed dup-heavy/harder inputs. Fixes guided).
+- **Next new problem:** Week 2 — **Two Pointers**, next ladder item: **Container With Most Water**. (Valid Palindrome cold 4/5; Two Sum II & 3Sum assisted — recognition improving, invariant precision still the gap.)
 
 ---
 
@@ -112,10 +116,10 @@ Bridge · ~ Implement Queue using Stacks (assisted 2026-06-23 — redo cold 2026
 (Earlier: ✅ Valid Parentheses · ✅ Min Stack · ✅ Prefix→Postfix · ✅ NGE-I)
 
 ### Arrays & Hashing — gate: hashing-for-O(1)-lookup cold medium
-✅ Two Sum · ✅ Contains Duplicate (cold 2026-06-23, 5/5) · ~ Valid Anagram (assisted 2026-06-24, off-by-one loop bound — redo cold 2026-06-27) · ~ Group Anagrams (assisted 2026-06-24, int[]-as-key steer — redo cold 2026-06-27) · ~ Top K Frequent Elements (assisted 2026-06-24, nudged off sort to bucket-sort — redo cold 2026-06-27) · ~ Product of Array Except Self (assisted 2026-06-25, level-1 hint used — redo cold 2026-06-28) · ⬜ Encode/Decode Strings · ⬜ Longest Consecutive Sequence
+✅ Two Sum · ✅ Contains Duplicate (cold 2026-06-23, 5/5) · ~ Valid Anagram (assisted 2026-06-24, off-by-one loop bound — redo cold 2026-06-27) · ~ Group Anagrams (assisted 2026-06-24, int[]-as-key steer — redo cold 2026-06-27) · ~ Top K Frequent Elements (assisted 2026-06-24, nudged off sort to bucket-sort — redo cold 2026-06-27) · ~ Product of Array Except Self (assisted 2026-06-25, level-1 hint used — redo cold 2026-06-28) · ~ Encode/Decode Strings (assisted 2026-06-27, level-1 hint to reach length-prefix — redo cold 2026-06-30) · ~ Longest Consecutive Sequence (assisted 2026-06-27, hint + duplicate→O(n²) miss, iterate set not array — redo cold 2026-06-30)
 
 ### Two Pointers — gate: converging/opposite-ends cold medium
-⬜ Valid Palindrome · ⬜ Two Sum II (sorted) · ⬜ 3Sum · ⬜ Container With Most Water
+✅ Valid Palindrome (cold 2026-06-27, 4/5) · ~ Two Sum II (sorted) (assisted 2026-06-27, defaulted to HashMap, needed steer to two-pointer/sorted — redo cold 2026-06-30) · ~ 3Sum (assisted 2026-06-27, 2 correctness bugs: missing dedup + stale hi pointer; fixes guided — redo cold 2026-06-30) · ⬜ Container With Most Water
 
 ### Sliding Window — gate: variable window + shrink condition cold medium
 ⬜ Best Time to Buy/Sell Stock · ⬜ Longest Substring Without Repeating · ⬜ Longest Repeating Character Replacement · ⬜ Permutation in String · ⬜ Minimum Window Substring (hard) · ⬜ Sliding Window Maximum (deque)

@@ -240,6 +240,39 @@ map.tailMap(x);       // submap with keys >= x
 
 ---
 
+## ── ENCODING / LENGTH-PREFIX ─────────────────────────────────────────────────
+# Real world: parcels in a truck with no dividers — tape a label "next 6 boxes = parcel A"
+# in front of each. Unload by COUNT, never by hunting for a marker.
+# Use when: serialize a list of arbitrary strings into ONE string and parse it back, and
+# no character is safe as a separator (data may contain ANY char, incl. the delimiter).
+
+```java
+// ENCODE: <len>#<payload> for each string
+public String encode(List<String> strs) {
+    StringBuilder sb = new StringBuilder();
+    for (String s : strs) sb.append(s.length()).append('#').append(s);
+    return sb.toString();
+}
+
+// DECODE: read length up to '#', then consume exactly len chars BY COUNT (never scan)
+public List<String> decode(String str) {
+    List<String> res = new ArrayList<>();
+    int i = 0;
+    while (i < str.length()) {
+        int j = i;
+        while (str.charAt(j) != '#') j++;            // j stops at the delimiter
+        int len = Integer.parseInt(str.substring(i, j));
+        res.add(str.substring(j + 1, j + 1 + len));  // grab len chars blindly
+        i = j + 1 + len;                             // JUMP past payload to next length
+    }
+    return res;
+}
+```
+
+⚠️ Watch out: decode by COUNT (`i += len`), never by scanning for the next `#` — a payload can contain `#`/digits and the count-jump is exactly what makes those just data. Empty string → `0#` round-trips to `""`; empty list → `""` decodes to `[]` (loop never runs), NOT `[""]`. Length is multi-digit: accumulate `num*10 + (c-'0')`. Auxiliary space O(1); output is O(N) and unavoidable.
+
+---
+
 ## ── COMMON JAVA UTILITIES ───────────────────────────────────────────────────
 
 ```java
@@ -290,3 +323,4 @@ new ArrayList<>(Arrays.asList(1, 2, 3));
 - Sliding Window: `minimum-window-substring-solved.md` · `find-all-anagrams-solved.md`
 - Prefix Sum: `subarray-sum-equals-k-solved.md` · `range-sum-query-immutable-solved.md`
 - Intervals: `merge-intervals-solved.md` · `non-overlapping-intervals-solved.md`
+- Encoding: `encode-decode-strings-solved.md`

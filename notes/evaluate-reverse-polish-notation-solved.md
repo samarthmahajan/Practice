@@ -4,10 +4,10 @@ Solved Date: 2026-06-21
 Pattern Tag: expression-parsing
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-06-25
-- Last Rating: Okay
-- Review Count: 1
+- Stage: 3
+- Review Date: 2026-07-02
+- Last Rating: Strong
+- Review Count: 2
 - Graduated: No
 
 ---

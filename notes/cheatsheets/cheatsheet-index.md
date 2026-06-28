@@ -9,6 +9,7 @@ two pointer, opposite ends, slow fast       → § TWO POINTER
 sliding window, variable, fixed, anagram    → § SLIDING WINDOW
 intervals, merge, overlap, meeting rooms    → § INTERVALS
 treemap, ceiling, floor, firstkey           → § TREEMAP
+encode decode strings, length prefix, serialize → § ENCODING / LENGTH-PREFIX · encode-decode-strings-solved.md
 string, stringbuilder, char, utilities      → § UTILITIES
 
 ## G2 · Linear  (group2-linear.md)

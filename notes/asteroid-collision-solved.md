@@ -1,4 +1,4 @@
-z# Asteroid Collision — Medium
+# Asteroid Collision — Medium
 Problem Link: https://leetcode.com/problems/asteroid-collision/
 Solved Date: 2026-06-21
 Pattern Tag: simulation-stack
