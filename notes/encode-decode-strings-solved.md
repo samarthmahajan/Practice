@@ -5,9 +5,9 @@ Pattern Tag: encoding / length-prefix
 
 ## SRS Tracking
 - Stage: 1
-- Review Date: 2026-06-28
-- Last Rating: —
-- Review Count: 0
+- Review Date: 2026-06-29
+- Last Rating: Okay
+- Review Count: 1
 - Graduated: No
 
 ---

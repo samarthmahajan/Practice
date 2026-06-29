@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "TODAY=$(date \"+%A, %B %d, %Y\"); ISO=$(date \"+%Y-%m-%d\"); printf '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"SESSION-START BRIEFING (deliver before responding to anything else; begin the reply with the word Samarth per CLAUDE.md): (1) Tell Samarth today is %s. (2) Read @notes/REVIEW.md and list every row whose Review Date is on or before %s as the items DUE THIS SESSION (problem name, tag, days overdue); if none are due, say reviews are clear. (3) Surface the next unsolved problem from the CURRENT POSITION block in @plans/PLAN.md. Keep it a tight briefing, then wait.\"}}' \"$TODAY\" \"$ISO\"",
+            "statusMessage": "Loading session briefing..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -6,10 +6,10 @@ Solved Date: 2026-06-24
 Pattern Tag: hashing / group-by-canonical-key
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-06-28
-- Last Rating: Okay
-- Review Count: 2
+- Stage: 2
+- Review Date: 2026-07-01
+- Last Rating: Strong
+- Review Count: 3
 - Graduated: No
 
 ---
