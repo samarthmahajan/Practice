@@ -1,5 +1,7 @@
 # SRS Review Index
 
+> **Suspension rule (2026-07-02):** a problem with a pending redo-cold in PLAN.md is suspended from SRS review — the redo supersedes it (pass = Strong review, reschedule from pass date; fail = requeue +3 days, card stays suspended). Never show a card right before its redo-cold — it would contaminate the cold test.
+
 | File | Problem | Tag | Stage | Review Date | Last Rating | Review Count | Graduated |
 |---|---|---|---|---|---|---|---|
 | simplify-path-solved.md | Simplify Path | simulation-stack | 3 | 2026-07-02 | Strong | 2 | No |
@@ -11,8 +13,8 @@
 | valid-parentheses-solved.md | Valid Parentheses | matching-stack | 4 | 2026-07-13 | Strong | 1 | No |
 | min-stack-solved.md | Min Stack | auxiliary-stack | 3 | 2026-06-29 | — | 0 | No |
 | prefix-to-postfix-solved.md | Prefix to Postfix | expression-parsing | 3 | 2026-06-30 | — | 0 | No |
-| decode-string-solved.md | Decode String | simulation-stack | 2 | 2026-06-30 | Strong | 3 | No |
-| basic-calculator-ii-solved.md | Basic Calculator II | expression-parsing | 2 | 2026-06-29 | Strong | 2 | No |
+| decode-string-solved.md | Decode String | simulation-stack | 2 | 2026-07-05 | Strong | 4 | No |
+| basic-calculator-ii-solved.md | Basic Calculator II | expression-parsing | 3 | 2026-07-09 | Strong | 3 | No |
 | largest-rectangle-in-histogram-solved.md | Largest Rectangle in Histogram | monotonic-stack | 2 | 2026-06-29 | Strong | 3 | No |
 | trapping-rain-water-solved.md | Trapping Rain Water | two-pointer / converging-max | 3 | 2026-07-01 | Strong | 1 | No |
 | implement-queue-using-stacks-solved.md | Implement Queue using Stacks | stack / amortized-two-stack | 3 | 2026-07-03 | Strong | 2 | No |
@@ -27,9 +29,11 @@
 | two-sum-ii-solved.md | Two Sum II - Input Array Is Sorted | two-pointer / converging-ends | 2 | 2026-06-30 | Strong | 1 | No |
 | 3sum-solved.md | 3Sum | two-pointer / triplet-dedup | 2 | 2026-06-30 | Strong | 1 | No |
 | container-with-most-water-solved.md | Container With Most Water | two-pointer / converging-ends | 1 | 2026-06-29 | — | 0 | No |
-| best-time-to-buy-and-sell-stock-solved.md | Best Time to Buy and Sell Stock | sliding-window / running-min | 1 | 2026-06-29 | — | 0 | No |
+| best-time-to-buy-and-sell-stock-solved.md | Best Time to Buy and Sell Stock | sliding-window / running-min | 2 | 2026-07-02 | Strong | 1 | No |
 | longest-substring-without-repeating-solved.md | Longest Substring Without Repeating Characters | sliding-window / variable-shrink | 1 | 2026-06-29 | — | 0 | No |
 | longest-repeating-character-replacement-solved.md | Longest Repeating Character Replacement | sliding-window / max-frequency-window | 1 | 2026-06-30 | — | 0 | No |
 | permutation-in-string-solved.md | Permutation in String | sliding-window / fixed-window-anagram | 1 | 2026-06-30 | — | 0 | No |
 | minimum-window-substring-solved.md | Minimum Window Substring | sliding-window / variable-window-cover | 2 | 2026-07-02 | — | 0 | No |
 | sliding-window-maximum-solved.md | Sliding Window Maximum | monotonic-deque / window-max | 1 | 2026-06-30 | — | 0 | No |
+| binary-search-solved.md | Binary Search | binary-search / standard | 1 | 2026-07-01 | — | 0 | No |
+| remove-k-digits-solved.md | Remove K Digits | monotonic-stack / remove-k-to-minimize | 2 | 2026-07-05 | — | 0 | No |

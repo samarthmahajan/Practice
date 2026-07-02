@@ -8,6 +8,12 @@ DSA only (LLD / system design / behavioral deliberately out of scope).
 - What earns the confidence is the EXIT CRITERIA below. "Done with the course" = those gates are green, NOT "finished the list."
 - If you fudge "cold-solve" or skip mocks, the number is fiction. The rules are the plan.
 
+## Timeline decision (OPEN — decide by 2026-07-12, after the calibration mock)
+Start was 2026-06-21 → Week 11 ends ~**2026-09-05**, and the exit criteria (3 consecutive green blind-set weeks, 8 human mocks) cannot all be green before Week 11–12 **even with zero slips**. The old "~2 months" target contradicts this plan — resolve it deliberately, don't discover it in Week 9.
+- **Recommended:** target interviews **≥ 2026-09-07** and tell recruiters mid-September. Costs nothing now, buys the slack the plan currently lacks.
+- **If August is immovable:** pre-decided cuts = compress Bit Manipulation, shrink Tries. **Never cut DP or mocks.**
+- Lead-level loops also weight system design / LLD (deliberately out of scope here) — September needs reserved bandwidth for it either way.
+
 ---
 
 ## Definition of SOLVED (this is the whole game)
@@ -27,8 +33,9 @@ A pattern is "owned" when: you cold-solve a *fresh* medium of that pattern, in t
 - Record the cold-solve rate. This number, trending up, is the only metric that matters.
 
 ## Reviews & recall
-- Daily: `/review-dsa` (SRS) for spaced repetition of solved cards.
-- Recall drill (DAILY — required): for each pattern keep a card of "trigger words → pattern → **the governing invariant, DERIVED from first principles, not memorized**." Interviews are won at recognition speed *and* invariant precision — see **## Your failure mode** below.
+- Daily: `/review-dsa` (SRS) for spaced repetition of solved cards. **Capacity: up to 5/day weekdays, up to 15/day weekends while a backlog exists** (Blitz/Snippet modes preferred — without weekend catch-up capacity the queue mathematically never clears).
+- **Queue-dedupe rule (added 2026-07-02):** a problem with a pending redo-cold is **SUSPENDED from SRS review** — the redo supersedes it. A passed redo counts as a Strong review (reschedule from the pass date); a failed redo requeues +3 days and keeps the card suspended. This kills double-billing AND protects cold-test validity — seeing a card's pseudocode hours before its redo-cold would contaminate the "cold."
+- Recall drill (daily — kept SMALL so it actually runs): **5 minutes, ≤2 patterns**, cold-write "trigger words → pattern → **the governing invariant + WHY, DERIVED from first principles, not memorized**" into GAP-DRILLS.md. **Contamination guard:** never drill a pattern whose redo-cold is due within 2 days — drill it right AFTER that redo attempt instead (win or lose; post-attempt is when encoding sticks). Interviews are won at recognition speed *and* invariant precision — see **## Your failure mode** below.
 
 ## Your failure mode (precision, not recognition)
 Diagnosis from real attempts: your pattern **recognition is fine** — you name the right pattern fast. You lose points on the **precise governing invariant**: the exact operator (`>=` vs `>`), the exact guard (`if (output.isEmpty())`), the boundary *why*. So far every miss has been an invariant, never a misread pattern.
@@ -39,6 +46,8 @@ Diagnosis from real attempts: your pattern **recognition is fine** — you name 
 ## Mocks
 - **From Week 3:** one **calibration** human mock in Week 3, then **1 human mock/week from Week 5** (Pramp / interviewing.io / peer). The coach can't reproduce pressure or follow-ups — get an external read before banking a month of self-grading.
 - `/mock` (AI) any time for timed, no-hint, graded reps between human mocks.
+- **Blind set #1: Sat 2026-07-04**, mid-sprint, no excuses — it's a measurement, not a reward. Expect a humbling baseline; take it anyway. Every skipped Saturday is a missing data point the exit criteria need (the first one, 2026-06-27, was skipped for new problems — never again).
+- **Calibration human mock: BOOK NOW (2026-07-02)** for the Jul 6–12 window — Pramp / interviewing.io have lead times.
 
 ## Capacity
 ≤4 problems/weekday (9–5 job), heavier weekends. ~25–35/week. Quality (cold + narrated) over raw count.
@@ -49,6 +58,11 @@ When due-reviews + redo-colds + planned-new exceed the day's capacity, drop in t
 2. Then Stage 3+ SRS reviews.
 3. **Never** drop a redo-cold or a Stage-1 sprint — those are mastery-critical.
 Carry dropped *new* problems; never carry dropped *redos*.
+
+## WIP limit (standing rule — added 2026-07-02, the one-sentence fix for Weeks 1–2)
+- **No new problem while more than 3 redo-colds are DUE** (redo date ≤ today). Due redos always outrank new work.
+- **No new TOPIC while any redo-cold from earlier topics is due**, or while the previous topic's gate has never been attempted.
+- The rule counts **due** redos, not pending ones — a fresh `~` schedules its redo +3 days out and must not block tomorrow's work. Deadlock-proof: due redos are always playable, and clearing them unblocks everything.
 
 ---
 
@@ -87,11 +101,20 @@ Backbone = the NeetCode-150 set (the proven minimal-complete coverage for tier-o
 
 DP gets ~2.5 weeks (8–10). Protect it — don't let earlier topics bleed into it. **Seed it early: 1 spaced 1D-DP rep/week from Week 6** (once recursion matures post-Trees/Backtracking), so Week 8 is *deepening*, not first contact.
 
+*Adjustment 2026-07-02: coverage ran ~1 week ahead (Sliding Window + Binary Search opened in Week 2) while 21 redo-colds piled up and 0/5 touched gates closed. Week 2 therefore ends with a **consolidation sprint (Jul 2–5)** — see CURRENT POSITION — and Week 3 resumes exactly on the written schedule: gate attempts + Binary Search ladder + calibration mock. The sprint costs zero calendar time; it spends the coverage lead to bank the ownership.*
+
 ---
 
 ## CURRENT POSITION
-- **Topic:** Week 2 — Arrays & Hashing (in progress). Stacks ladder fully attempted; its mastery gate is still open until the 6 redo-colds below pass cold.
-- **Redo cold (2026-06-25):** Decode String (Tier C #6) — `~` 2026-06-22; Basic Calculator II (Tier D) — `~` 2026-06-22; Remove K Digits (Tier E) — `~` 2026-06-22; Remove Duplicate Letters (Tier E) — `~` 2026-06-22; Largest Rectangle in Histogram (Tier F) — `~` 2026-06-22.
+- **Topic:** 🔒 **CONSOLIDATION SPRINT (2026-07-02 → 07-05): zero new problems until ≤3 redo-colds are due.** Coverage ran a week ahead (A&H, Two Pointers, Sliding Window fully attempted; Binary Search opened) but 0 of 5 touched gates are met and 21 redo-colds are pending — the sprint spends the coverage lead to bank the ownership. Stacks gate stays open until its redo-colds pass cold.
+- **Sprint schedule (oldest debt first — most decay = truest cold test):**
+  - Thu 07-02 (tonight): ✅ Decode String (4/5) · ✅ Basic Calculator II (5/5) · ✅ Remove K Digits (4/5) — 3/3 DONE
+  - Fri 07-03: Remove Duplicate Letters · Largest Rectangle in Histogram · Implement Queue using Stacks · Binary Search #704
+  - Sat 07-04: **BLIND SET #1 first**, then Valid Anagram · Group Anagrams · Top K Frequent · Product of Array Except Self
+  - Sun 07-05: Encode/Decode Strings · Longest Consecutive Sequence · Two Sum II · 3Sum · Container With Most Water · Longest Substring w/o Repeating · LRCR · Permutation in String · Min Window Substring · Sliding Window Maximum
+  - Overflow rolls to Mon 07-06 — the new-problem lock holds until ≤3 due. A failed redo requeues +3 days; that's the system working, not a setback.
+- **SRS during sprint (suspension rule applied):** only 10 cards are live — Simplify Path, Evaluate RPN, Daily Temperatures, NGE-II, Min Stack, Prefix→Postfix, Contains Duplicate, Valid Palindrome, Trapping Rain Water, Best Time Buy/Sell. The other 18 due cards ride on their redo-colds.
+- **Redo cold (2026-06-25):** Remove Duplicate Letters (Tier E) — `~` 2026-06-22; Largest Rectangle in Histogram (Tier F) — `~` 2026-06-22.
 - **Redo cold (2026-06-26):** Implement Queue using Stacks (Bridge) — `~` 2026-06-23.
 - **Redo cold (2026-06-27):** Valid Anagram (Arrays & Hashing) — `~` 2026-06-24 (off-by-one loop bound; symmetric tests hid it); Group Anagrams (Arrays & Hashing) — `~` 2026-06-24 (int[]-as-key steer; concept was cold, key-precision was the gap); Top K Frequent Elements (Arrays & Hashing) — `~` 2026-06-24 (nudged off O(n log n) sort to bucket-sort; selection-recognition was the gap).
 - **Redo cold (2026-06-28):** Product of Array Except Self — `~` 2026-06-25 (level-1 hint used).
@@ -100,13 +123,17 @@ DP gets ~2.5 weeks (8–10). Protect it — don't let earlier topics bleed into 
 - **Redo cold (2026-06-30):** Two Sum II (sorted) — `~` 2026-06-27 (reached for HashMap first; needed steer to exploit sorted + O(1) two-pointer. Execution clean once redirected; the miss was recognition).
 - **Redo cold (2026-06-30):** 3Sum — `~` 2026-06-27 (recognition cold & correct: sort+anchor+two-pointer; but 2 invariant bugs — dedup entirely missing + reset lo not hi → stale pointer dropped triplets; passed samples, failed dup-heavy/harder inputs. Fixes guided).
 - **Redo cold (2026-07-01):** Container With Most Water — `~` 2026-06-28 (code cold/optimal/bug-free first run, recognition cold; but governing-invariant WHY — "shorter wall already maxed its area at the widest span" — was coach-supplied in the dry run, not produced cold. One sentence from `[x]`).
-- **Redo cold (2026-07-01):** Best Time to Buy/Sell Stock — `~` 2026-06-28 (Sliding Window topic opened; conceptual dive done. First invariant wrong "increment both pointers", exposed by coach counterexample [3,5,1,4]; self-corrected mechanic but WHY "left=running min" coach-supplied; steps scaffolded into file. Final code clean/optimal/bug-free).
+- **[x] CLEARED (2026-06-30):** Best Time to Buy/Sell Stock — redo cold passed Strong. Invariant ("i = running min / cheapest buy so far") + WHY ("a lower buy dominates every future sell, so older higher buys can never win") + O(n)/O(1) all produced unaided.
+- **[x] CLEARED (2026-07-02):** Decode String — redo passed cold, 19/30 min, 4/5. Approach + code + two-stack invariant all unaided, first-run green; caught the coach's wrong expected output. Dings: narrated AFTER coding (chronic — 2nd occurrence), and first complexity answer was input-O(n); self-corrected to output-sensitive after one counterexample probe. Gap-drill queued: first-try output-sensitive complexity.
+- **[x] CLEARED (2026-07-02):** Basic Calculator II — redo passed cold, 19/30 min, **5/5**. Narrated invariant + WHY + dry run BEFORE coding (habit fixed same night it was called out); complexity O(n)/O(n) stated first-try upfront; first-run green on 9/9 including hidden edges (minus-division truncation 14-3/2=13, single number, negative intermediates). Elegant in-loop end-flush via `i==length-1`. Known follow-up parked: O(1)-space stack-free variant.
+- **[x] CLEARED (2026-07-02):** Remove K Digits — redo passed cold, ~24/30 min, 4/5. Rule (strict `>`), code, and all edges unaided — 9/9 first run incl. "1519" k=1 → "119", which disproves the "remove the global largest" rationale he narrated (his CODE implemented the correct leftmost-descent rule; the verbal WHY was the imprecise part). Dings: skipped the requested dry run under time pressure; WHY needed prompting again. Card created (was card-less) → remove-k-digits-solved.md, Stage 2, review 2026-07-05.
 - **Redo cold (2026-07-01):** Longest Substring Without Repeating — `~` 2026-06-28 (saw solution; recognition correct — variable window + HashSet — but shrink step fuzzy: "remove the duplicate" instead of "evict from LEFT until valid". Foundational variable-window template; high-priority redo).
 - **Redo cold (2026-07-02):** Longest Repeating Character Replacement — `~` 2026-06-29 (heavy conceptual scaffolding to reach `windowLen−maxCount>k`; code correct incl. never-decrement-max trick, but stale-max correctness WHY — "res only hits a new high when maxCount hits a new REAL high" — not produced cold).
 - **Redo cold (2026-07-02):** Permutation in String — `~` 2026-06-29 (core idea his — fixed window + freq match; but incremental +out/−in slide and the Java mechanic were coach-supplied, not produced cold).
 - **Redo cold (2026-07-02):** Minimum Window Substring (hard) — `~` 2026-06-29 (4/5; recognition + approach + correct code his on a Hard, shrink-stop right; dinged: coach pre-pointed the 2 precision spots, and completeness used per-step `values().allMatch(<=0)` instead of O(1) have/need → not clean-optimal; never verbalized invariant).
 - **Redo cold (2026-07-02):** Sliding Window Maximum (hard, deque) — saw solution 2026-06-29 via `code` (full hint ladder → solution). Monotonic-deque pattern is new; redo cold high-priority.
-- **Next new problem:** Sliding Window ladder COMPLETE (all 6 attempted). Next: **Binary Search** — start with conceptual dive (Concept / When to use / How to identify) BEFORE any problem; first ladder item is **Binary Search (#704)**. (But: clear the redo-cold + sprint backlog first — gate still open.)
+- **Redo cold (2026-07-03):** Binary Search (#704) — `~` 2026-06-30 (recognition cold & correct: standard BS shape, overflow-safe mid, early-return on match; but the governing invariant — loop runs while window non-empty → `<=` not `<` — was coach-supplied after he first reached for a symptom patch (special-case n==1). One operator from a clean solve).
+- **Next new problem (🔒 LOCKED until sprint exit — ≤3 redos due):** Search a 2D Matrix (Binary Search ladder; conceptual dive already done).
 
 ---
 
@@ -115,9 +142,9 @@ DP gets ~2.5 weeks (8–10). Protect it — don't let earlier topics bleed into 
 ### Stacks  — gate: monotonic + simulation cold medium
 Tier A · ✅ Next Greater Element II · ✅ Daily Temperatures
 Tier B · ✅ Asteroid Collision · ✅ Simplify Path
-Tier C · ✅ Evaluate RPN · ~ Decode String (assisted 2026-06-22 — redo cold 2026-06-25)
-Tier D · ~ Basic Calculator II (assisted 2026-06-22 — redo cold 2026-06-25)
-Tier E · ~ Remove K Digits (assisted 2026-06-22 — redo cold 2026-06-25) · ~ Remove Duplicate Letters (assisted 2026-06-22 — redo cold 2026-06-25)
+Tier C · ✅ Evaluate RPN · ✅ Decode String (redo passed COLD 2026-07-02 — 19/30 min, 4/5, unaided; caught coach's wrong expected output; complexity needed one pushback, then self-corrected to output-sensitive)
+Tier D · ✅ Basic Calculator II (redo passed COLD 2026-07-02 — 19/30 min, 5/5: narrated first, complexity first-try, 9/9 incl. hidden edges)
+Tier E · ✅ Remove K Digits (redo passed COLD 2026-07-02 — ~24/30 min, 4/5, 9/9 incl. hidden "1519" trap) · ~ Remove Duplicate Letters (assisted 2026-06-22 — redo cold 2026-06-25)
 Tier F · ~ Largest Rectangle in Histogram (assisted 2026-06-22 — redo cold 2026-06-25) · ✅ Trapping Rain Water (cold 2026-06-23, 4/5)
 Bridge · ~ Implement Queue using Stacks (assisted 2026-06-23 — redo cold 2026-06-26)
 (Earlier: ✅ Valid Parentheses · ✅ Min Stack · ✅ Prefix→Postfix · ✅ NGE-I)
@@ -132,7 +159,7 @@ Bridge · ~ Implement Queue using Stacks (assisted 2026-06-23 — redo cold 2026
 ~ Best Time to Buy/Sell Stock (assisted 2026-06-28, first invariant wrong "increment both", fixed via coach counterexample; WHY "left=running min" coach-supplied; steps scaffolded — redo cold 2026-07-01) · ~ Longest Substring Without Repeating (saw solution 2026-06-28, recognition correct but shrink step fuzzy; foundational variable-window template — redo cold 2026-07-01) · ~ Longest Repeating Character Replacement (assisted 2026-06-29, heavy conceptual scaffolding to reach invariant windowLen−maxCount>k; code correct incl. never-decrement-max optimization, but stale-max correctness WHY not owned cold — redo cold 2026-07-02) · ~ Permutation in String (assisted 2026-06-29, core idea his but incremental +out/−in slide + Java mechanic coach-supplied; code correct, edge cases handled; stream-per-slide smell — redo cold 2026-07-02) · ~ Minimum Window Substring (hard) (assisted 2026-06-29, 4/5 — approach his & correct on a Hard incl. shrink-stop; but coach pre-pointed the 2 precision spots and validity check was per-step scan not have/need → not clean-optimal — redo cold 2026-07-02) · ~ Sliding Window Maximum (deque) (saw solution 2026-06-29 via `code` — used full hint ladder then asked for the solution; monotonic-deque pattern new to him — redo cold 2026-07-02)
 
 ### Binary Search — gate: "search on the answer" cold medium
-⬜ Binary Search · ⬜ Search a 2D Matrix · ⬜ Koko Eating Bananas · ⬜ Find Minimum in Rotated Sorted Array · ⬜ Search in Rotated Sorted Array · ⬜ Median of Two Sorted Arrays (hard)
+~ Binary Search (assisted 2026-06-30, recognition cold & correct but governing invariant `<` vs `<=` coach-supplied; patched-symptom instinct first (special-case n==1) before the cause — redo cold 2026-07-03) · ⬜ Search a 2D Matrix · ⬜ Koko Eating Bananas · ⬜ Find Minimum in Rotated Sorted Array · ⬜ Search in Rotated Sorted Array · ⬜ Median of Two Sorted Arrays (hard)
 
 ### Queues & Deques — gate: monotonic deque cold medium
 ⬜ Implement Queue using Stacks · ⬜ Sliding Window Maximum · ⬜ Number of Recent Calls · ⬜ Design Circular Queue
