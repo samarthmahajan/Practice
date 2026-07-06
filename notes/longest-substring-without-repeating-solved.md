@@ -6,10 +6,10 @@ Solved Date: 2026-06-28
 Pattern Tag: sliding-window / variable-shrink
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-06-29
-- Last Rating: —
-- Review Count: 0
+- Stage: 2
+- Review Date: 2026-07-08
+- Last Rating: Strong
+- Review Count: 1
 - Graduated: No
 
 > Note: logged `~` — SOLUTION WAS READ, not solved. Recognition was correct (variable window + HashSet), but the shrink step was fuzzy ("remove the duplicate character" instead of "evict from the LEFT end until valid"). This is the FOUNDATIONAL variable-window template — redo cold 2026-07-01 is high priority; it underpins Longest Repeating Char Replacement, Permutation in String, Minimum Window Substring.

@@ -4,11 +4,13 @@ Solved Date: 2026-06-27
 Pattern Tag: encoding / length-prefix
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-06-29
-- Last Rating: Okay
-- Review Count: 1
+- Stage: 2
+- Review Date: 2026-07-07
+- Last Rating: Strong
+- Review Count: 2
 - Graduated: No
+
+> 2026-07-05 redo-cold: PASSED per suspension rule (pass = Strong review). 23/30 min, 5/5 first run incl. [""] vs [] distinction. Coach flag on record: narration + dry run + code matched this card verbatim (incl. formatting); Samarth affirmed unaided — accepted as final.
 
 ---
 

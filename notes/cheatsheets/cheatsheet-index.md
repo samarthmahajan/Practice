@@ -15,6 +15,7 @@ string, stringbuilder, char, utilities      → § UTILITIES
 ## G2 · Linear  (group2-linear.md)
 stack, deque, push pop peek                 → § STACK
 monotonic stack, next greater, next smaller → § MONOTONIC STACK
+remove k digits, smallest by deletion, keep-stack → § MONOTONIC STACK · remove-k-digits-solved.md
 bfs, queue, level order, unweighted path    → § QUEUE / BFS
 multi source bfs, rotting, walls gates      → § MULTI-SOURCE BFS
 bfs carry forward, inverse weight           → § QUEUE / BFS          · nested-list-weight-sum-ii-solved.md

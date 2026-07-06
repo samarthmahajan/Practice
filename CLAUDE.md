@@ -47,6 +47,7 @@ A problem is SOLVED only if: unaided (no hint/no peek) AND within the time box (
 
 ## Study Plan (follow the plan, enforce the gates)
 - `@plans/PLAN.md` is the source of truth: 11-week pattern sequence, curated pattern-ranked ladders, mastery gates, and EXIT CRITERIA.
+- HLD/system-design track runs in parallel: `@plans/HLD-PLAN.md` — own session triggers (`design`, `concept`, `teachback`, `redraw`), same Socratic + honesty rules. On any conflict, DSA redo-colds outrank HLD. While the DSA plan is active (through Sep 6), HLD never touches weekday evenings; from Sep 7 the evenings flip to HLD and DSA drops to its maintenance dose (defined in HLD-PLAN Phase 3).
 - While a pattern is active, the next `⬜` problem in its ladder takes priority over generic gap-filling.
 - After each attempt: in `@plans/PLAN.md` mark `[x]`/`~`, note time taken, and update CURRENT POSITION. Cross-check `src/<topic>/` files so position never gets stuck.
 - A pattern is "owned" only when its MASTERY GATE is met (cold-solve a fresh medium, in time, 2 of last 3). Don't wave me past a gate that isn't met.

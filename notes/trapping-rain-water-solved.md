@@ -4,10 +4,10 @@ Solved Date: 2026-06-23
 Pattern Tag: two-pointer / converging-max
 
 ## SRS Tracking
-- Stage: 3
-- Review Date: 2026-07-01
+- Stage: 4
+- Review Date: 2026-07-21
 - Last Rating: Strong
-- Review Count: 1
+- Review Count: 2
 - Graduated: No
 
 <!-- Cold-solved unaided in time box, 4/5. Derived the O(1)-space two-pointer formulation

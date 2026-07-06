@@ -4,10 +4,10 @@ Solved Date: 2026-06-23
 Pattern Tag: stack / amortized-two-stack
 
 ## SRS Tracking
-- Stage: 3
-- Review Date: 2026-07-03
+- Stage: 4
+- Review Date: 2026-07-20
 - Last Rating: Strong
-- Review Count: 2
+- Review Count: 3
 - Graduated: No
 
 <!-- Logged ~ ASSISTED: shipped an unconditional-transfer bug (the core insight), did not

@@ -98,6 +98,34 @@ for (int i = 0; i < 2 * n; i++) {
 
 ⚠️ Watch out: always store INDICES in the stack, not values — you need the index to fill the result array. Values can be retrieved as `arr[stack.peek()]`.
 
+### Greedy keep-stack — build smallest result by deleting k
+# Use when: delete k digits/chars so the remainder is the smallest possible, relative order preserved.
+# Card: remove-k-digits-solved.md
+
+```java
+public String removeKdigits(String num, int k) {
+    if (k == num.length()) return "0";
+    StringBuilder sb = new StringBuilder();
+    for (char c : num.toCharArray()) {
+        while (k > 0 && sb.length() > 0 && sb.charAt(sb.length() - 1) > c) {
+            sb.deleteCharAt(sb.length() - 1);
+            k--;
+        }
+        sb.append(c);
+    }
+    while (k > 0) { sb.deleteCharAt(sb.length() - 1); k--; }
+    int start = 0;
+    while (start < sb.length() && sb.charAt(start) == '0') start++;
+    String res = sb.substring(start);
+    return res.isEmpty() ? "0" : res;
+}
+```
+
+⚠️ Watch out: pop on STRICT `>` — popping an equal burns budget for zero gain ("1121" k=1: `>=` → "121", `>` → "111").
+It's the leftmost DESCENT that dies, not the global largest digit ("1519" k=1 → "119", not "151" — first differing
+position decides). Leftover k chops the TAIL (survivors are non-decreasing). Strip leading zeros AFTER all removals;
+empty → "0". StringBuilder is the right stack here: answer is a string, deleteCharAt(last) is O(1).
+
 ---
 
 ## ── QUEUE / BFS ─────────────────────────────────────────────────────────────
@@ -256,7 +284,7 @@ PriorityQueue<Integer> minHeap = new PriorityQueue<>();                         
 
 ## Solved Card Examples
 - Stack: `evaluate-reverse-polish-notation-solved.md` · `valid-parentheses-solved.md`
-- Monotonic Stack: `next-greater-element-i-solved.md` · `sliding-window-maximum-solved.md`
+- Monotonic Stack: `next-greater-element-i-solved.md` · `sliding-window-maximum-solved.md` · `remove-k-digits-solved.md`
 - BFS level-order: `maximum-width-binary-tree-solved.md` · `binary-tree-right-side-view-solved.md`
 - Multi-source BFS: `rotting-oranges-solved.md` · `walls-and-gates-solved.md`
 - Heap: `merge-k-sorted-lists-solved.md` · `find-median-data-stream-solved.md`

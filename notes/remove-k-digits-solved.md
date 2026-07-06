@@ -4,10 +4,10 @@ Solved Date: 2026-07-02
 Pattern Tag: monotonic-stack / remove-k-to-minimize
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-07-05
-- Last Rating: —
-- Review Count: 0
+- Stage: 3
+- Review Date: 2026-07-11
+- Last Rating: Strong
+- Review Count: 1
 - Graduated: No
 
 ---

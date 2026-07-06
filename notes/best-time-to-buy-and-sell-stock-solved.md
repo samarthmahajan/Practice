@@ -6,10 +6,10 @@ Solved Date: 2026-06-28
 Pattern Tag: sliding-window / running-min
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-07-02
+- Stage: 3
+- Review Date: 2026-07-11
 - Last Rating: Strong
-- Review Count: 1
+- Review Count: 2
 - Graduated: No
 
 > Note: logged `~` ASSISTED. Final code was clean/optimal/bug-free, but: (1) first invariant was WRONG — "increment both pointers" — exposed only by a coach counterexample [3,5,1,4]; (2) the precise WHY ("left = running minimum") was coach-supplied; (3) the 5 steps were scaffolded into the file. Redo cold 2026-07-01 — flips to `[x]` when the running-min invariant + WHY are produced unaided.
