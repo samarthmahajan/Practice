@@ -4,10 +4,10 @@ Solved Date: 2026-06-27
 Pattern Tag: hashing / set-membership
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-07-07
+- Stage: 3
+- Review Date: 2026-07-12
 - Last Rating: Strong
-- Review Count: 2
+- Review Count: 3
 - Graduated: No
 
 > 2026-07-05 redo-cold: PASSED per suspension rule (pass = Strong review). 20/30 min, 5/5 first run. Set-iteration fix owned (06-27 O(n²) gap closed); O(n) WHY (≤2n, run walked once from its unique top) produced in own words after one prompt. Ding: initial narration arrived LaTeX-formatted, flagged; WHY needed asking.

@@ -7,10 +7,13 @@ Pattern Tag: sliding-window / max-frequency-window
 
 ## SRS Tracking
 - Stage: 1
-- Review Date: 2026-06-30
+- Review Date: 2026-07-14
 - Last Rating: —
 - Review Count: 0
 - Graduated: No
+
+<!-- CLASS-B (2026-07-12, reclassified from pending redo): code cold 6/6 on both touches; the ONLY gap is the record-mechanism WHY. FIRST PROMPT at next review, before anything else: "Why can `res` only ever record while the window is provably valid?" Drill in GAP-DRILLS.md (due 2026-07-12). -->
+
 
 ---
 

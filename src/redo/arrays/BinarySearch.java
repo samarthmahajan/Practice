@@ -8,7 +8,6 @@ package redo.arrays;
  * index of target, or -1 if it is not present. Must run in O(log n).
  *
  * REDO COLD 2026-07-06 — originally assisted 2026-06-30 (loop operator coach-supplied).
- *
  * Time:  O(?)
  * Space: O(?)
  */

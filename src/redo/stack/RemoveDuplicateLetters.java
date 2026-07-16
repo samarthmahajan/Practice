@@ -8,32 +8,25 @@ package redo.stack;
  * and the result is the smallest in lexicographical order among all possible results.
  *
  * Time:  O(n)
- * Space: O(1)  — fixed 26-letter bookkeeping
+ * Space: O(1)
  */
 public class RemoveDuplicateLetters {
 
     public String removeDuplicateLetters(String s) {
-
-// Pass 1 — learn the future: how many of each letter exist in total.
         int[] count = new int[26];
         for (char c : s.toCharArray()) {
             count[c - 'a']++;
         }
 
-        boolean[] inResult = new boolean[26];   // is this letter already placed?
-        StringBuilder stack = new StringBuilder(); // doubles as stack + output
+        boolean[] inResult = new boolean[26];
+        StringBuilder stack = new StringBuilder();
 
-        // Pass 2 — build left-to-right.
         for (char c : s.toCharArray()) {
-            count[c - 'a']--;                 // we've now consumed this occurrence
+            count[c - 'a']--;
 
-            if (inResult[c - 'a']) {
-                continue;                     // rule: one copy of each letter only
-            }
+            if (inResult[c - 'a']) continue;
 
-            // Evict a previously kept letter when:
-            //   it's LARGER than c            -> dropping it makes the prefix smaller
-            //   AND it still appears later     -> count > 0, so it's safe to drop
+
             while (stack.length() > 0
                     && stack.charAt(stack.length() - 1) > c
                     && count[stack.charAt(stack.length() - 1) - 'a'] > 0) {

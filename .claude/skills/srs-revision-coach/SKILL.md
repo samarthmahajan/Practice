@@ -28,7 +28,8 @@ Given card state, assign Full, Snippet, or Blitz:
 - Last Rating Blank or Weak → Full (always, overrides everything)
 - Stage 1, Last Rating — (never reviewed) → Full
 - Stage 1–2, Last Rating Okay or Strong → Snippet
-- Stage 3–4 → Snippet
+- Stage 3–4, Last Rating Strong → Blitz (v3 diet — a twice-proven card earns the fast lane)
+- Stage 3–4, otherwise → Snippet
 - Stage 5–6 → Blitz
 - Graduated → Blitz
 

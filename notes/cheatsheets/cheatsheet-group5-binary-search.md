@@ -125,6 +125,20 @@ boolean feasible(int[] piles, int k, int H) {
 
 ⚠️ Watch out: ceiling division = `(value + divisor - 1) / divisor`. Don't use `Math.ceil((double)value / divisor)` — floating point errors will haunt you.
 
+⚠️ Watch out: **two valid templates — never cross them.** The one above (`lo < hi` + `hi = mid`, return `lo`) OR the candidate-tracking form below. Mixing `lo < hi` with `hi = mid - 1` drops the boundary cell and returns answer+1 (Koko 2026-07-09, fuzzed ~43% wrong).
+
+```java
+// Candidate-tracking form — MUST use lo <= hi (not <)
+int lo = 1, hi = maxPile, ans = hi;                 // ans init = a guaranteed-feasible value
+while (lo <= hi) {                                  // <= : at lo==hi the boundary cell still gets tested
+    int mid = lo + (hi - lo) / 2;
+    if (feasible(mid)) { ans = mid; hi = mid - 1; } // works → record, try smaller
+    else               { lo = mid + 1; }            // fails → go bigger
+}
+return ans;
+```
+⚠️ Also: sum the feasibility total in a `long` — per-pile term is int-safe but the running total overflows.
+
 ---
 
 ## ── ROTATED SORTED ARRAY ────────────────────────────────────────────────────
@@ -204,6 +218,8 @@ return lo;
 - **Lower bound**: using `hi = arr.length - 1` instead of `hi = arr.length`
 - **Lower bound**: using `lo <= hi` instead of `lo < hi`
 - **Search on answer**: using floating point ceiling instead of integer ceiling `(v + d - 1) / d`
+- **Search on answer**: `lo < hi` with the candidate-tracking form (`hi = mid - 1` + `ans` var) — drops the boundary cell → returns answer+1 (Koko 2026-07-09). Use `lo <= hi` with that form.
+- **Search on answer**: forgetting `long` for the feasibility sum — overflows on large pile counts
 - **Rotated array**: using `<` instead of `<=` in `arr[lo] <= arr[mid]` — misses 2-element edge case
 - **First occurrence**: returning immediately on match instead of saving + continuing left
 
@@ -214,6 +230,6 @@ return lo;
 - First/Last: `find-first-last-position-sorted-array-solved.md`
 - Lower bound: `search-insert-position-solved.md`
 - Search on answer: `koko-eating-bananas-solved.md` · `cutting-wood-solved.md`
-- Rotated: `search-rotated-sorted-array-solved.md` · `find-minimum-rotated-sorted-array-solved.md`
+- Rotated: `search-rotated-sorted-array-solved.md` · `find-minimum-in-rotated-sorted-array-solved.md`
 - Peak: `find-peak-element-solved.md`
 - Hard: `median-two-sorted-arrays-solved.md`

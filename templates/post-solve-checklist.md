@@ -15,6 +15,9 @@ Based on MAANG rating:
 
 Set: Last Rating = —, Review Count = 0, Graduated = No
 
+Class-B pass (`[x]*` — correct, in-time, unaided code; narration/WHY missed): Stage 1, Review Date = today + 2, and add an HTML comment at the top of the card naming the missed WHY — it is the FIRST prompt at the next review. Add the 5-min derivation drill to @notes/GAP-DRILLS.md, due tomorrow.
+Class-A miss (`~`): no card rating games — suspension per PLAN.md (`SUSP → redo YYYY-MM-DD` in REVIEW.md's Review Date column).
+
 ### 3. Save
 Save to @notes/[problem-name]-solved.md
 
@@ -41,7 +44,7 @@ Never skip this — it is how a fresh session knows where to resume.
 ### 8. 3-Problem Rule
 Count problems in @notes/REVIEW.md that share this pattern tag.
 - Tag matching = **broad/prefix match** — count any row whose tag starts with the same root word (e.g. `two-pointer`, `sliding-window`, `bfs`, `dfs`, `binary-search`). Sub-variants like `two-pointer / in-place` and `two-pointer / move shorter` both count toward the same root.
-- If < 3: announce "Pattern has X/3 problems. Here's your next one:" and immediately give an unseen problem from same tag.
+- If < 3: announce "Pattern has X/3 problems. Next one queued:" and name an unseen problem from the same tag — **but it goes to tomorrow's NEW slot, never stacked onto today** (PLAN.md hour budget).
 - If ≥ 3: announce "Pattern solid at 3+ problems. Ready for a new pattern when you are."
 
 Always announce this — never wait for the user to ask.

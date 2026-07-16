@@ -5,7 +5,7 @@ Read @plans/PLAN.md first, then @notes/REVIEW.md.
 - If today is a NEW topic in the plan (no problems yet from it), do the conceptual dive (Concept / When to use / How to identify / Core Patterns) BEFORE suggesting any problem.
 - Before trusting the checkboxes, CROSS-CHECK against reality: a curated problem already has a solved file in `src/<topic>/` (e.g. `DecodeString.java`) counts as DONE even if its box is unticked — tick it and move on. This keeps position correct even if a prior session forgot to update the plan.
 - Otherwise announce the active topic + the next unchecked question from the plan's curated ladder, with its LeetCode link. Give ONE Socratic nudge (per the plan), no solution.
-- Respect capacity: ≤4 problems on weekdays. If I've already hit today's count, say so and suggest reviews instead.
+- Follow PLAN.md's Daily protocol precedence exactly: class-A redo >5d overdue opens the session → otherwise the NEW slot (next ⬜, or this week's gate probe) → class-A redos → gap drills → SRS in budget. The WIP lock counts due CLASS-A redos only (>3 due blocks the new slot). One new problem per day is the norm; weekday hard cap 2h. If today's new slot is used, say so and point at debt/reviews instead.
 - Only fall through to the SRS checks below if the plan has no active topic or all curated questions are checked off.
 
 Run these checks in order and show the first one that applies:

@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "TODAY=$(date \"+%A, %B %d, %Y\"); ISO=$(date \"+%Y-%m-%d\"); printf '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"SESSION-START BRIEFING (deliver before responding to anything else; begin the reply with the word Samarth per CLAUDE.md): (1) Tell Samarth today is %s. (2) Read @notes/REVIEW.md and list every row whose Review Date is on or before %s as the items DUE THIS SESSION (problem name, tag, days overdue); if none are due, say reviews are clear. (3) Surface the next unsolved problem from the CURRENT POSITION block in @plans/PLAN.md. Keep it a tight briefing, then wait.\"}}' \"$TODAY\" \"$ISO\"",
+            "command": "TODAY=$(date \"+%A, %B %d, %Y\"); ISO=$(date \"+%Y-%m-%d\"); printf '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"SESSION-START BRIEFING (deliver before responding to anything else; begin the reply with the word Samarth per CLAUDE.md): (1) Tell Samarth today is %s. (2) Lead with the PROGRESS scoreboard table from @plans/PLAN.md — streak, gates, last blind set, next checkpoint. (3) Read @notes/REVIEW.md and list every row whose Review Date is a real date on or before %s as DUE THIS SESSION (problem name, tag, days overdue); rows whose Review Date starts with SUSP are class-A-suspended — give ONE summary line, never list them as due. If none are due, say reviews are clear. (4) From the CURRENT POSITION block in @plans/PLAN.md surface today items and the next new-slot problem, and state the class-A due count vs the WIP lock. Keep it a tight briefing, then wait.\"}}' \"$TODAY\" \"$ISO\"",
             "statusMessage": "Loading session briefing..."
           }
         ]

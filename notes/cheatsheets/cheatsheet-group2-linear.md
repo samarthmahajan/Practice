@@ -126,6 +126,43 @@ It's the leftmost DESCENT that dies, not the global largest digit ("1519" k=1 �
 position decides). Leftover k chops the TAIL (survivors are non-decreasing). Strip leading zeros AFTER all removals;
 empty → "0". StringBuilder is the right stack here: answer is a string, deleteCharAt(last) is O(1).
 
+### Greedy keep-stack — smallest result, each letter kept exactly once
+# Use when: keep every DISTINCT element exactly once, order preserved, result lexicographically smallest.
+# Unlike remove-k (fixed budget), here the eviction budget is CONDITIONAL: you may pop a bigger kept letter
+# for a smaller incoming one ONLY IF the bigger letter still appears later (a future copy exists to re-add).
+# Card: remove-duplicate-letters-solved.md
+
+```java
+public String removeDuplicateLetters(String s) {
+    int[] count = new int[26];
+    for (char c : s.toCharArray()) count[c - 'a']++;
+
+    boolean[] inResult = new boolean[26];
+    StringBuilder stack = new StringBuilder();
+
+    for (char c : s.toCharArray()) {
+        count[c - 'a']--;                             // consumed this occurrence
+        if (inResult[c - 'a']) continue;              // keep one copy only
+        while (stack.length() > 0
+                && stack.charAt(stack.length() - 1) > c              // improves lex order
+                && count[stack.charAt(stack.length() - 1) - 'a'] > 0) { // safe: reappears later
+            char removed = stack.charAt(stack.length() - 1);
+            stack.deleteCharAt(stack.length() - 1);
+            inResult[removed - 'a'] = false;          // re-addable when its future copy arrives
+        }
+        stack.append(c);
+        inResult[c - 'a'] = true;
+    }
+    return stack.toString();
+}
+```
+
+⚠️ Watch out: decrement `count` BEFORE the `continue` skip — decrement after and the pop guard reads stale counts.
+The `count[top] > 0` guard is MANDATORY, not a nicety: popping a last-occurrence letter loses it forever → result
+would miss a distinct char (illegal). Un-mark popped letters (`inResult=false`) or they can never be re-added.
+Two WHYs to say out loud: (1) smaller char earlier wins because compare is decided at the first differing position;
+(2) you can only evict a letter that reappears, else the "every distinct letter exactly once" contract breaks.
+
 ---
 
 ## ── QUEUE / BFS ─────────────────────────────────────────────────────────────
@@ -284,7 +321,7 @@ PriorityQueue<Integer> minHeap = new PriorityQueue<>();                         
 
 ## Solved Card Examples
 - Stack: `evaluate-reverse-polish-notation-solved.md` · `valid-parentheses-solved.md`
-- Monotonic Stack: `next-greater-element-i-solved.md` · `sliding-window-maximum-solved.md` · `remove-k-digits-solved.md`
+- Monotonic Stack: `next-greater-element-i-solved.md` · `sliding-window-maximum-solved.md` · `remove-k-digits-solved.md` · `remove-duplicate-letters-solved.md`
 - BFS level-order: `maximum-width-binary-tree-solved.md` · `binary-tree-right-side-view-solved.md`
 - Multi-source BFS: `rotting-oranges-solved.md` · `walls-and-gates-solved.md`
 - Heap: `merge-k-sorted-lists-solved.md` · `find-median-data-stream-solved.md`

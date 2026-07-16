@@ -16,6 +16,7 @@ string, stringbuilder, char, utilities      → § UTILITIES
 stack, deque, push pop peek                 → § STACK
 monotonic stack, next greater, next smaller → § MONOTONIC STACK
 remove k digits, smallest by deletion, keep-stack → § MONOTONIC STACK · remove-k-digits-solved.md
+remove duplicate letters, keep once, lexicographic smallest → § MONOTONIC STACK · remove-duplicate-letters-solved.md
 bfs, queue, level order, unweighted path    → § QUEUE / BFS
 multi source bfs, rotting, walls gates      → § MULTI-SOURCE BFS
 bfs carry forward, inverse weight           → § QUEUE / BFS          · nested-list-weight-sum-ii-solved.md
@@ -50,7 +51,7 @@ first occurrence, leftmost                  → § FIRST OCC
 last occurrence, rightmost                  → § LAST OCC
 insertion point, lower bound                → § LOWER BOUND          · search-insert-position-solved.md
 search on answer, minimum speed, capacity   → § SEARCH ANSWER        · koko-eating-bananas-solved.md
-rotated array, find minimum rotated         → § ROTATED ARRAY
+rotated array, find minimum rotated         → § ROTATED ARRAY        · find-minimum-in-rotated-sorted-array-solved.md
 peak element                               → § FIND PEAK
 2d matrix binary search                    → § 2D MATRIX
 

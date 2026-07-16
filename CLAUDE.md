@@ -35,19 +35,19 @@ When a new problem starts and I confirm I want to begin, create a starter file f
 
 ## Daily Rhythm
 1. New topic? Do the conceptual dive FIRST (Concept / When to use / How to identify) before any problems.
-2. New problem next — use `/start`; it follows `@plans/PLAN.md` for the active pattern + next curated question. Subject to PLAN.md's WIP limit: due redo-colds outrank new problems.
-3. Capacity: ≤4 problems on weekdays (I work 9–5), heavier on weekends. Quality (cold + narrated) over count.
-4. Reviews after — `/review-dsa`, up to 5 on weekdays, up to 15 on weekends while a backlog exists. Problems with a pending redo-cold are suspended from review (see PLAN.md queue-dedupe rule).
+2. Then PLAN.md's **Daily protocol precedence list**, exactly: class-A redo >5d overdue opens the session → NEW slot (one problem: next ⬜ or the weekly gate probe; blocked only while class-A due > 3) → class-A redos → gap drills → SRS in budget.
+3. Budgets: weekday hard cap 2h total; **Minimum Viable Day = 15 min** (3 Blitz cards OR 1 drill) keeps the streak. Quality over count — overshooting the budget is a red flag, not a win.
+4. Reviews — `/review-dsa`: ≤30 min/day, ≤5/session, ≤2 sessions/day on weekends. Late reviews are fine — SRS bends, streaks don't. Only a pending CLASS-A redo suspends a card; class-B cards stay live with the missed WHY as their first prompt.
 5. Saturday: a BLIND SET via `/mock` — 4 random problems across all learned patterns, timed, no hints.
 
 ## Definition of SOLVED (enforce this strictly)
 A problem is SOLVED only if: unaided (no hint/no peek) AND within the time box (Easy ≤15 / Medium ≤30 / Hard ≤45 min) AND narrated before coding AND clean optimal Big-O.
-- If I used ANY hint, ran over time, or saw the solution → it is NOT solved. Log it `~` (assisted) and requeue to redo cold in 3 days.
+- Misses are classed per PLAN.md v3: **class A** (wrong output, ANY hint/peek, or over time) → log `~`, redo cold in 3 days, card suspended from SRS. **Class B** (correct code, in time, unaided — but narration skipped or the governing WHY not produced under probing) → log `[x]*`: ladder advances, no redo; the missing WHY becomes a 5-min drill plus the card's next review prompt. One class-B per problem ever — a repeat on the same problem escalates to class A. Gates and blind sets count pure `[x]` only.
 - Only an unaided in-time pass logs as `[x]`. Be honest with me about this even when I want the win — a soft "solved" is the one thing that breaks the whole plan.
 
 ## Study Plan (follow the plan, enforce the gates)
 - `@plans/PLAN.md` is the source of truth: 11-week pattern sequence, curated pattern-ranked ladders, mastery gates, and EXIT CRITERIA.
-- HLD/system-design track runs in parallel: `@plans/HLD-PLAN.md` — own session triggers (`design`, `concept`, `teachback`, `redraw`), same Socratic + honesty rules. On any conflict, DSA redo-colds outrank HLD. While the DSA plan is active (through Sep 6), HLD never touches weekday evenings; from Sep 7 the evenings flip to HLD and DSA drops to its maintenance dose (defined in HLD-PLAN Phase 3).
+- HLD/system-design track runs in parallel: `@plans/HLD-PLAN.md` — own session triggers (`design`, `concept`, `teachback`, `redraw`), same Socratic + honesty rules. On any conflict, DSA class-A redos outrank HLD. While DSA core coverage is active (until HLD Phase 3 starts, ~mid-Oct), HLD never touches weekday evenings; then the evenings flip to HLD and DSA drops to its maintenance dose (defined in HLD-PLAN Phase 3). One shared budget: ~8–10 h/week across BOTH tracks.
 - While a pattern is active, the next `⬜` problem in its ladder takes priority over generic gap-filling.
 - After each attempt: in `@plans/PLAN.md` mark `[x]`/`~`, note time taken, and update CURRENT POSITION. Cross-check `src/<topic>/` files so position never gets stuck.
 - A pattern is "owned" only when its MASTERY GATE is met (cold-solve a fresh medium, in time, 2 of last 3). Don't wave me past a gate that isn't met.

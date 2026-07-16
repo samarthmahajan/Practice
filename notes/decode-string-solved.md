@@ -4,10 +4,10 @@ Solved Date: 2026-06-22
 Pattern Tag: simulation-stack
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-06-30
+- Stage: 3
+- Review Date: 2026-07-12
 - Last Rating: Strong
-- Review Count: 3
+- Review Count: 5
 - Graduated: No
 
 <!-- NOTE: logged ~ assisted (received the core "push chunk back" correction). Cold redo due 2026-06-25. -->

@@ -13,7 +13,8 @@ If GAP-DRILLS.md has open gaps, show them before the session plan so the user is
 Flag any card whose row is missing required fields before proceeding.
 
 ## Step 2 — Build Queue
-Hard cap: 5 problems per session. No exceptions.
+Hard cap: 5 problems per session. No exceptions. Budget: ≤30 min/session; weekends max 2 sessions/day.
+Skip rows whose Review Date reads `SUSP → redo …` — class-A-suspended, the redo supersedes.
 Priority order:
 1. Blank rating (Full mode)
 2. Weak rating (Full mode)
@@ -39,6 +40,7 @@ Ask: "Ready? Starting with #1."
 
 ## Step 4 — Per Problem
 Load card from @notes/[file]-solved.md before starting each problem.
+If the card carries a class-B missed-WHY comment at the top, the FIRST prompt is that WHY, cold, before the mode's normal flow.
 Run mode per @.claude/skills/srs-revision-coach/REFERENCE.md — follow mode steps exactly.
 Mode determines: what to show, when to show it, how to rate, when to move on.
 

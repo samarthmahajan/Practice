@@ -54,8 +54,11 @@ Sprint = first 2 SRS review cycles after a weak solve. Announce "🏃 Sprint act
 Any problem overdue 3+ days → force Blitz mode regardless of Stage or Last Rating.
 Goal: clear the debt fast. Correct core-insight recall counts as Okay minimum.
 Exception: Stage 1 or Stage 2 → Sprint Mode takes priority over Blitz. Never skip sprint.
+Suspended rows: a REVIEW.md row whose Review Date reads `SUSP → redo …` is class-A-suspended — never queue it; the redo supersedes the review.
+Class-B cards (missed-WHY comment at the top of the card): the FIRST prompt of any mode is that WHY, cold, before anything else.
 
-## Double-Strong Fast-Track (Stage 3 only)
-If a Stage 3 problem was rated Strong last review AND is rated Strong again now → advance to Stage 4 immediately.
-Do not wait for the remaining 10-day cycle. Update Stage in both the card and REVIEW.md.
+## Double-Strong Fast-Track (Stages 3–5, generalized v3 2026-07-12)
+If a Stage 3–5 problem was rated Strong last review AND is rated Strong again now → advance TWO stages instead of one (3→5, 4→6 graduated, 5→6 graduated).
+Do not wait out the remaining cycle. Update Stage in both the card and REVIEW.md.
 Check: if Last Rating = Strong before this review, current Strong = fast-track.
+Rationale: a card proven twice at long spacing is retention-safe — the Saturday blind set is the backstop that catches false graduations.
