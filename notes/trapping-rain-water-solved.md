@@ -5,9 +5,9 @@ Pattern Tag: two-pointer / converging-max
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-07-21
-- Last Rating: Strong
-- Review Count: 2
+- Review Date: 2026-11-04
+- Last Rating: Okay
+- Review Count: 3
 - Graduated: No
 
 <!-- Cold-solved unaided in time box, 4/5. Derived the O(1)-space two-pointer formulation

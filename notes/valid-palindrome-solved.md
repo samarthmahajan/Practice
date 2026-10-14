@@ -5,7 +5,7 @@ Pattern Tag: two-pointer / converging-ends
 
 ## SRS Tracking
 - Stage: 2
-- Review Date: 2026-07-09
+- Review Date: 2026-10-21
 - Last Rating: Okay
 - Review Count: 1
 - Graduated: No

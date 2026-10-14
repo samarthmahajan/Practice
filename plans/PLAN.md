@@ -1,108 +1,131 @@
-# DSA Mastery Plan — Samarth (v3 · consistency-first · rewritten 2026-07-12 after full multi-lens review)
+# DSA Mastery Plan — Samarth (v4 · restart-proof · rewritten 2026-08-22 after the 37-day outage postmortem)
 
-Goal: walk into ANY tier-one DS&Algo round with an earned, MEASURED ~90% expected pass rate — on a schedule a working Lead can sustain indefinitely.
-DSA only. HLD → `plans/HLD-PLAN.md` (LLD gated there) · behavioral track starts at Checkpoint 2 (see EXIT CRITERIA).
-Attempt history & flags → `plans/LOG.md` (append-only). This file stays a plan, not a journal.
+Goal unchanged: walk into ANY tier-one DS&A round with an earned, MEASURED ~90% expected pass rate — on a schedule a working Lead can sustain indefinitely.
+DSA only. HLD → `plans/HLD-PLAN.md` (its Phase-3 evening-flip date slides with the re-baseline below; that file is otherwise untouched). Attempt history & flags → `plans/LOG.md`.
 
-## The honest contract (unchanged — the spine)
+## Postmortem — the 37-day outage (blameless; five lines, then it's closed)
+- **Incident:** last green 2026-07-16 → restart 2026-08-22. Blind set #1 and both calibration mocks never ran. CP1 (Aug 8) passed unheld.
+- **Root cause 1 — restart cost:** the protocol had no concept of a layoff. Day-1-back served a 40-day-stale Hard redo + 35 overdue cards + 5 blocked drills: an all-debt wall, the documented burnout trigger (see 07-12 entry in LOG).
+- **Root cause 2 — no graceful degradation:** one missed day cost the same as thirty ("streak broken"), so day 2 had nothing left to protect. Binary streaks fail open.
+- **Root cause 3 — invisible assets:** the scoreboard counted only what was missing. 38 banked cards and an 82% cold-redo pass rate were nowhere on the board.
+- **Fixes shipped in v4:** Lapse Protocol (tiered restarts) · Decay Audit (re-measure, don't grind) · warm starts + debt ceiling · asset sheet + MTTR on the scoreboard · captain's calls (sanctioned autonomy) · Invariant Vault (`notes/VAULT.md`). **The bar did not move: 4-axis SOLVED, A/B miss classes, gate purity, budgets — all unchanged.**
+
+## The honest contract (unchanged — still the spine)
 - No plan guarantees a single round; variance is real. Confidence is EARNED through the exit criteria and measured — never felt into existence.
 - If you fudge "cold-solve" or skip measurement (blind sets, mocks), every number below is fiction.
-- v3 changed the COST of a near-miss and the VISIBILITY of progress. It did not move the bar.
+- v4 changed the RESTART COST of a lapse and the VISIBILITY of assets. It did not move the bar.
 
----
-
-## PROGRESS — the scoreboard (coach updates after every session; morning hook leads with this)
-| Signal | Now (2026-07-12) | Target |
+## PROGRESS — the scoreboard (coach updates every session; morning hook leads with this)
+| Signal | Now (2026-08-22) | Target |
 |---|---|---|
-| Mastery gates | 0/5 met · **A&H probed 07-16: 1 pass / 1 attempt** (needs 2 of last 3) | all green |
-| Core ladder coverage | Stacks 100% · A&H 100% · TP 100% · SW 4/6 · BS 3/6 (07-16) | 100% |
-| Redo pass rate (July) | ~18/22 cold ≈ 82% | ≥80% |
-| Blind sets recorded | 0 — **first: Sat 2026-07-18** | rolling ≥10/12 |
-| Human mocks | 0 — DSA calibration: BOOK TODAY · design calibration: Jul 18/19 | last 2 per track "would advance" |
-| Streak (≥ minimum day) | starts 2026-07-12 | never 0 two days running |
-| Self-rated confidence | 10% (2026-07-12 baseline) | logged weekly at retro, tracked against evidence |
-| Next checkpoint | **CP1 — Sat 2026-08-08** | — |
+| Streak / recovery | restart day · last outage: 37d · **MTTR is now paired with the streak — next lapse must recover in <4 days** | never 0 two days running |
+| Mastery gates | 0/5 · **A&H is ONE clean probe from green (1 pass / 1 attempt)** — closest boss on the board | all green |
+| Ladder coverage | Stacks ██████████ · A&H ██████████ · TP ██████████ · SW ████████░░ 4/6 · BS █████████░ 4/5 · rest ⬜ | 100% |
+| Blind sets recorded | 0 · **first datum: Sat 08-29 calibration half-set (blameless)** | rolling ≥10/12 |
+| Human mocks | 0 · booking is now **trigger-based: 2 gates green → book that day** (standing "book today" items rot — removed) | last 2 per track "would advance" |
+| Assets (only go up) | **38 cards banked · 22 cold redos run, 18 passed (82%) · 3 ladders at 100% · Vault: 12 WHYs claimed, 6 bounties open** | grows every week |
+| Self-rated confidence | re-log at Sunday retro 08-23 (last: 10% on 07-12) | tracked against evidence |
+| Next checkpoint | **CP-R (restart check) — Sat 2026-09-05** | restart held: ≥10/14 non-zero days |
 
-## Operating model — consistency-first, evidence-gated
-Interview timing is no longer a deadline; it is a TRIGGER. The calendar can slide — the weekly rhythm cannot.
-- **Checkpoints every 4 weeks:** CP1 Aug 8 · CP2 Sep 5 · CP3 Oct 3 · CP4 Oct 31. At each: gates reviewed, PROGRESS snapshotted, load re-tuned, staged tracks started (behavioral + LLD at CP2), apply-decision evaluated.
-- **Apply trigger — whichever fires first:**
-  (a) rolling blind-set ≥10/12 AND the latest DSA + design mocks both "would advance" → applications start within the week;
-  (b) **CP4 (Oct 31) backstop — applications start regardless.** On record: confidence lags competence, so "when I feel ready" never fires on its own; loops starting Nov land offers Dec–Jan, inside your stated comfort. Warm-up companies first, dream companies 2–3 weeks behind them.
-- Projection at sustainable pace (6–8 new/week): core coverage mid-Oct, mock-hardened early Nov. Dec/Jan is slack, not the plan.
+## RE-ENTRY — Comeback Week (08-22 → 08-29 · this section is deleted at CP-R)
+Rust is data, not shame. A 37-day gap is an unscheduled retention experiment — predict first, then measure, and let results retune the board.
+- **Sat 08-22 — Audit s1 (~20 min):** 60-second prediction sheet (rank your families: still-cold → gone), then 3 Blitz: Valid Parentheses · Contains Duplicate · Daily Temperatures (uncontaminated). Non-zero on the board.
+- **Sun 08-23 — Audit s2 (≤30 min):** TP + A&H family sample (Two Sum II · Trapping Rain Water · Group Anagrams · Longest Consecutive Sequence · Product of Array Except Self). Score predictions vs reality. 10-min retro-lite.
+- **Mon 08-24 — BOSS: Koko redo** (M, 30' box, morning if possible) → immediately claim the `< vs <=` bounty (the highest-priority drill rides this boss) → fuzz-verify the win.
+- **Tue 08-25 — Audit s3 (≤30 min):** BS-family cards (uncontaminated once Koko is done) + rotated-array decisiveness drill + S2DM seam-weld drill.
+- **Wed 08-26 — BOSS: Minimum Window Substring redo** (H, 45' box). Open bounty: the have/need O(1) WHY, produced cold BEFORE coding — never claimed in 3 touches. Take it and it's the biggest scalp in the vault.
+- **Thu 08-27 — NEW slot returns: Search in Rotated Sorted Array → CLOSES the Binary Search ladder.** https://leetcode.com/problems/search-in-rotated-sorted-array/
+- **Fri 08-28 — light (≤30 min):** SW drills now unblocked (LSWR failure-direction · LRCR record-mechanism) + audit stragglers.
+- **Sat 08-29 — CALIBRATION SET:** half blind set (1M/1H), owned patterns only, narrated aloud, recorded. Blameless: the score tunes the schedule, not the self-image. Then one captain's call: week-2 probe = A&H (nearest win) or Two Pointers (rotation)?
+Week objective: **"Comeback held: 2 bosses down, BS ladder CLOSED, first calibration datum on the board."**
 
-## Weekly budget (BOTH tracks combined — the consistency contract)
-- **~8–10 h/week total. Weekday hard cap 2 h. Overshooting is a red flag, not a win** — binge-and-crash is what July proved.
-- **Minimum Viable Day (the streak unit): 15 min** — 3 Blitz cards OR 1 gap drill OR 1 redraw. On a dead day, do the MVD and stop, guilt-free. Consistency is built on the floor, not the target.
-- Recommended (not mandatory): run the NEW-problem slot as a ~40-min MORNING block before work. Your misses are precision misses, and precision dies first at 9 pm, last at 8 am. Evenings then carry only light debt (drills / Blitz / redos).
+## Operating model — checkpoints re-baselined (4-week cadence unchanged)
+- **CP-R Sat 09-05:** restart held? (≥10/14 non-zero days · audit complete · both redos cleared · BS closed) → **CP2 Sat 10-03** (behavioral track starts: 1 STAR story/week) → **CP3 Sat 10-31** → **CP4 Sat 11-28 — apply backstop, regardless.**
+- **The price list (cost stays visible, never moralized):** the 37-day outage moved the backstop Oct 31 → Nov 28 and offers Dec–Jan → Jan–Feb. A second outage that size costs the winter window entirely; a <4-day lapse costs ~nothing. That's the exchange rate — spend accordingly.
+- **Apply trigger (a) unchanged:** rolling blind-set ≥10/12 AND latest DSA + design mocks both "would advance" → applications within the week. Warm-up companies first while DP II lands; dream companies 2–3 weeks behind.
+- **Projection at the protocol's own norm (1 new/weekday, probe included → ~4–5 ladder items/week): core (≈88 left) lands late Dec–Jan.** 6–8/week would need 2-problem days — the July binge pattern; not assumed. **Therefore CP4 Nov 28 = "start applying," never "core finished":** realistic Nov-28 state is foundations' gates green + Queues/LL/Trees done + blind-set record + 2 mocks, DP in progress → warm-up companies first, dream companies peak Jan–Feb as DP lands.
 
-## Definition of SOLVED (unchanged 4 axes) + miss classes (new)
+## Weekly budget + the floor (consistency contract, menu widened)
+- **~8–10 h/week both tracks · weekday hard cap 2 h · overshooting is a red flag, not a win.** NEW slot as a ~40-min morning block when possible — precision dies at 9 pm, lives at 8 am.
+- **Minimum Viable Day = 15 min — a menu now, pick ANY one:** 3 Blitz cards · 1 gap drill · 1 vault re-derivation (pick a claimed WHY, produce it cold again) · 1 STAR story draft (floor-eligible NOW, before CP2) · 1 HLD redraw. A dead day + MVD = a green day, guilt-free.
+- **Debt ceiling (new):** ≤1 boss (class-A redo) per day · SRS ≤30 min · ≤2 drills/day · **every session opens with a 2-min warm start** (one Blitz card you own — never open a session cold on debt). No day is 100% debt.
+
+## Definition of SOLVED + miss classes — UNCHANGED (this is the bar)
 `[x]` requires ALL: unaided · in time box (E≤15 / M≤30 / H≤45) · invariant + WHY narrated BEFORE coding · clean optimal Big-O.
-A miss is now classed by WHAT failed:
-- **Class A — the solution failed:** wrong output on any test, saw a hint/pattern name/solution, or over the time box → `~`, full **redo-cold +3 days**, card SUSPENDED from SRS (dedupe rule), gap drill if a mechanic caused it.
-- **Class B — the solution stood, the articulation didn't:** correct output, in time, unaided — but narration skipped or the governing WHY not produced under probing → logged **`[x]*`**: the ladder ADVANCES, no redo. The missing sentence becomes a 5-min derivation drill (next morning) AND the first prompt at the card's next SRS review (card stays LIVE, Stage 1).
-- Guards: a compile typo fixed in ≤1 min is not wrong output. **One class-B per problem, ever** — a second class-B on the same problem escalates to class A. **`[x]*` never counts toward mastery gates or blind-set stats** — those stay 4-axis pure.
-Why the split: every recorded miss is one operator or one WHY sentence on an otherwise-cold solve (see LOG.md). A 30-min re-solve plus 3-day suspension is the most expensive possible cure for a one-sentence gap; the drill machinery targets the actual deficit. LRCR spent three full re-solves on a single missing sentence — never again.
+- **Class A — the solution failed** (wrong output, any hint/peek, or over time) → `~`, redo-cold +3 days, card SUSPENDED from SRS.
+- **Class B — the solution stood, the articulation didn't** → `[x]*`: ladder advances, no redo; the missing WHY becomes a 5-min drill + the card's next review prompt. One class-B per problem EVER — a repeat escalates to class A.
+- Guards: compile typo fixed ≤1 min ≠ wrong output. `[x]*` never feeds gates or blind sets — those stay 4-axis pure. A soft "solved" is still the one thing that breaks the whole plan.
 
-## Per-pattern MASTERY GATE (unchanged) + gate probes (new)
-Gate: cold-solve a FRESH medium of that pattern, in time, 2 of the last 3 attempts. `[x]*` does not count.
-- **Gate probe — once a week the new-problem slot draws a fresh, unseen medium from a finished topic** (rotation: A&H → Two Pointers → Stacks → SW → BS → …). This is the only mechanism that moves 0/5, it doubles as interleaving (pattern-discrimination practice — the actual interview skill), and it is narrated OUT LOUD.
+## Per-pattern MASTERY GATE + probes (mechanics unchanged · nearest-win surfaced)
+Gate: cold-solve a FRESH unseen medium of that pattern, in time, **2 of the last 3** — `[x]` only. One probe per week in the NEW slot, drawn from a finished topic.
+- **Rotation is the default; a captain's call may redirect one probe at a nearest win** — A&H needs exactly ONE clean pass to become the first green gate of the campaign. After a redirect, rotation resumes (A&H → TP → Stacks → SW → BS → …).
 - A finished ladder schedules that topic's first probe the following week. A topic is CLOSED only when its gate is green.
 
-## Daily protocol — ONE precedence list (supersedes every older ordering; /start follows this)
-1. **Class-A redo overdue >5 days** → it opens the session. Otherwise:
-2. **NEW slot (one problem):** next ⬜ in the active ladder — or this week's gate probe. 30–45 min box. Skipped only while class-A due > 3 (**WIP lock counts class-A only**).
-3. **Class-A redos due** (oldest first).
-4. **Gap drills due** (5 min each — cold-write invariant + WHY into GAP-DRILLS.md).
-5. **SRS reviews, in budget:** ≤30 min/day, ≤5/session, Blitz-first per Overdue Triage; weekends ≤2 sessions. **Late reviews are FINE — SRS bends, streaks don't.** Overflow drops here, never above.
-6. Done early? Stop. Banked rest is tomorrow's precision.
+## Daily protocol v4 — ONE precedence list (/start follows this)
+0. **Warm start (2 min): one owned Blitz card.** Then:
+1. **Class-A redo overdue >5 days** opens the session (max 1 boss/day). Otherwise:
+2. **NEW slot (one problem):** next ⬜ in the active ladder — or this week's gate probe. 30–45 min box. Blocked only while class-A due >3 (WIP lock counts class-A only).
+3. **Class-A redos due** (oldest first — still max 1/day).
+4. **Gap drills due** (≤2/day · contamination guard per SRS rules).
+5. **SRS in budget:** ≤30 min, ≤5 cards, Blitz-first. Late reviews are FINE — SRS bends, streaks don't.
+6. Done early? **Stop.** Banked rest is tomorrow's precision.
+- **Fuzz ritual:** every boss/redo pass gets brute-force fuzz-verified when a brute force exists — the 20,045-case green bar IS the trophy (FindMin precedent, 07-16).
+- **Captain's calls — 2/week, one-line log in LOG.md:** may resequence anything (defer a redo, swap a probe, take a preview). May NEVER touch grading axes, gate purity, or honesty rules. Precedent: the SWM deferral and the 07-16 double-day — both explicit calls, both worked.
+- **Flex Friday (only when no boss is due):** the slot may preview the NEXT topic's first problem instead of the ladder item — forward interleaving, logged `(p)`, never counts toward the future topic's gate.
 
-## Weekly rhythm
-- **Mon–Fri:** the protocol above, ≤2 h/day.
-- **Saturday — BLIND SET (never skipped again):** 4 problems via `/mock blind`, fixed mix **1E / 2M / 1H**, drawn only from learned patterns (class-A-suspended cards excluded), **narrated out loud** (phone recording), self-written edge tests before coding. Score lands in PROGRESS. On human-mock weeks the mock runs the same day and the blind set shrinks to 2 (1M/1H).
-- **Sunday:** overflow debt · HLD rep (its plan) · **10-min retro: 3 concrete wins FIRST, then gaps, then next week's 3 priorities · update PROGRESS + the confidence number.**
-- **Mocks (cadence, not count):** DSA calibration this week (interviewing.io / Pramp — book today). Design calibration Jul 18/19 (HLD-PLAN). Then ~1 human mock/week ALTERNATING DSA/design; the ≤2/week combined cap stands. Verdicts land in PROGRESS.
+## Weekly rhythm — run it like the sprints you already run at work
+- **Mon (5 min): sprint planning** — name the week's ONE objective and put it on the scoreboard ("BS ladder CLOSED" · "SWM slain, Queues open"). A week with a name beats seven task lists.
+- **Tue–Fri:** the protocol above, ≤2 h/day.
+- **Sat: DEMO DAY — blind set:** 4 problems via `/mock blind`, fixed 1E/2M/1H, learned patterns only (class-A-suspended excluded), narrated aloud (phone recording), self-written edge tests before coding. Score → PROGRESS. Half-set (1M/1H) on human-mock weeks and on the first Saturday after any Tier-2+ lapse.
+- **Sun: retro** — 3 concrete wins FIRST, then gaps, then next week's 3 priorities · update scoreboard + confidence number · purge expired sections.
+- **Mocks:** trigger-based (2 gates green → book same day) · then ~1/week alternating DSA/design · ≤2/week combined cap stands.
 
-## Reviews & recall (deltas only — the SRS engine lives in .claude/skills/srs-revision-coach/)
-- **Suspension applies to class-A pending redos only.** Class-B cards stay live; their first review prompt is the missed WHY.
-- REVIEW.md convention: suspended rows carry `SUSP → redo YYYY-MM-DD` in the Review Date column, so the morning hook never reports them as due.
-- Stage 3–4 cards with Last Rating = Strong review in **Blitz**; Double-Strong Fast-Track now applies at Stages 3–5 (skill updated). Trust the engine — July's pile-up was mode weight + suspension bleed, not interval math.
-- Recall drill: unchanged (5 min, ≤2 patterns, DERIVE don't memorize, contamination guard: never drill a pattern whose class-A redo is due within 2 days).
+## Lapse Protocol — the circuit breaker (new; this is what was missing)
+The system now degrades gracefully. On any gap, /start applies the tier — no shame arithmetic, just the runbook:
+- **Tier 0 (1 day):** nothing happened. MVD today, normal protocol tomorrow.
+- **Tier 1 (2–3 days):** warm start + one Blitz session today; bosses resume tomorrow. Log "recovered in Nd" — recovery time is the stat.
+- **Tier 2 (4–13 days):** day 1 = MVD only (uncontaminated Blitz) · day 2 = easiest due boss · overdue SRS mass re-spreads forward, Blitz-first · no Hard boss before day 3.
+- **Tier 3 (14+ days):** full re-entry — prediction sheet + Decay Audit week (§RE-ENTRY above is the reusable template) · checkpoints re-baselined · first Saturday = half-set calibration · MTTR updated on the scoreboard. **After Tier 3 the plan gets a postmortem, not a guilt trip — one section, five lines, closed.**
+The streak metric is now a pair: current streak + MTTR of last lapse. "Never 0 two days running" stays the alert threshold; a fast recovery is a WIN on the board, not a stain.
 
-## Your failure mode (diagnosis unchanged — treatment now matches)
-Recognition is fine; precision (operator, guard, boundary WHY) is the gap — every recorded miss, zero exceptions. The cure is DERIVATION, not volume; class-B drills are that cure implemented. Highest-ROI review material: each card's Watch Out For + the invariant's WHY.
+## Reviews & recall (engine unchanged — .claude/skills/srs-revision-coach/ — one comeback overlay)
+- **Decay Audit (one-time, this week):** the 35 overdue cards are NOT 35 debts. Re-test by FAMILY sample (2–3 cards per family, Blitz): family passes → all its cards KEEP stage, dates re-spread forward — surviving 40 days unprompted is stronger evidence than the schedule ever had. Family fails → only its cards drop one stage and queue normally. ~3 audit sessions replace 7+ treadmill days, and the result is an honest decay map.
+- Suspension (class-A only) · class-B cards live with the missed WHY as first prompt · Blitz fast-track Stages 3–5 · contamination guard (never drill a pattern whose class-A redo is due within 2 days) — all unchanged.
+- **Invariant Vault — `notes/VAULT.md` (new):** every WHY produced COLD gets one line, in your words, dated. Open bounties = WHYs never yet produced cold (named only — no answer text; claiming one = producing it at the redo/review). The vault is the highest-ROI skim before any mock, and the trophy shelf: your failure mode was precision-WHYs, so the weakness is now the collection.
 
-## EXIT CRITERIA — the 90% gate (v3)
+## Your failure mode (diagnosis unchanged)
+Recognition is fine; precision (operator, guard, boundary WHY) is the entire miss record — zero pattern-recognition misses to date. The cure is DERIVATION, not volume. Highest-ROI review material: each card's Watch Out For + the invariant's WHY — i.e., the vault.
+
+## EXIT CRITERIA — the 90% gate (bar unchanged, dates re-pegged)
 - [ ] Every pattern gate green.
-- [ ] **Rolling blind-set ≥10 of last 12** (3 Saturdays, fixed 1E/2M/1H mix). *(Replaces "3 consecutive weeks ≥85%" — on n=4 that demanded 12/12 straight and held the gate hostage to one unlucky hard. Same rigor, sane variance.)*
-- [ ] Human mocks: **latest 2 DSA verdicts "would advance"** (cadence-based; the count target is dropped).
+- [ ] Rolling blind-set ≥10 of last 12 (fixed 1E/2M/1H mix).
+- [ ] Human mocks: latest 2 DSA verdicts "would advance".
 - [ ] DP: a fresh medium DP cold in ≤30 min.
-- [ ] **Behavioral: 8 STAR stories written + spoken aloud** (track starts CP2, ~1/week — a Lead loop can die in this round; it was in nobody's scope before).
-*(Removed: "250–330 problems attempted." The plan itself called count "a guardrail, not the goal," then enshrined it as a goal. At measured throughput it demanded fiction. Ladders + gates + blind sets ARE the coverage guarantee.)*
+- [ ] Behavioral: 8 STAR stories written + spoken aloud (track opens CP2 Oct 3 · drafts floor-eligible now).
 
-## Topic sequence (replaces the 11-week calendar — order fixed, dates float, checkpoints steer)
-Binary Search (2 core left) → **Queues/Deques (opens with the SWM class-A redo)** → Linked Lists (9) → Trees (15 — the money topic, deliberately uncut) → Tries (3) → Heaps (5) → Backtracking (8) → Graphs (12) → Greedy & Intervals (9) → **DP I (10) → DP II (9) — protected; nothing bleeds into DP** → Bits (4).
-≈ 89 core problems + weekly gate probes ≈ 12–14 weeks at 6–8 new/week → core done mid-Oct. `(s)` stretch items only when a topic finishes under budget.
+## Topic sequence (order fixed, dates float — flavor is free)
+Binary Search (1 left — **closes Thu 08-27**) → **Queues/Deques — opens with SWM, the deferred boss** → Linked Lists (9 — LRU Cache ⭐, the interview celebrity) → **Trees (15 — the money topic, deliberately uncut)** → Tries (3) → Heaps (5) → Backtracking (8 — where recursion becomes a tool, not a fear) → Graphs (12 — where senior loops separate people) → Greedy & Intervals (9) → **DP I (10) → DP II (9) — protected; the fear tax, paid once, stays paid** → Bits (4).
+≈88 core + weekly gate probes ≈ 12–14 weeks from 08-24 → core mid/late Nov. `(s)` stretch only when a topic finishes under budget.
 
 ---
 
-## Curated ladders (✅ cold · `[x]*` class-B pass · ~ pending class-A redo · ⬜ todo · (s) stretch)
+## Curated ladders (✅ cold · `[x]*` class-B pass · ~ pending class-A redo · ⬜ todo · (p) preview · (s) stretch)
 
 ### Stacks — gate NOT MET (first probe: this rotation)
 Tier A ✅ NGE-II ✅ Daily Temperatures · Tier B ✅ Asteroid Collision ✅ Simplify Path · Tier C ✅ Evaluate RPN ✅ Decode String · Tier D ✅ Basic Calculator II · Tier E ✅ Remove K Digits ✅ Remove Duplicate Letters · Tier F ✅ Largest Rectangle in Histogram ✅ Trapping Rain Water · Bridge ✅ Implement Queue using Stacks · (earlier: ✅ Valid Parentheses ✅ Min Stack ✅ Prefix→Postfix ✅ NGE-I)
 
-### Arrays & Hashing — gate NOT MET · **1 pass / 1 attempt** (needs 2 of last 3)
+### Arrays & Hashing — gate NOT MET · **1 pass / 1 attempt — ONE clean probe from green**
 ✅ Two Sum · ✅ Contains Duplicate · ✅ Valid Anagram · ✅ Group Anagrams · ✅ Top K Frequent Elements · ✅ Product of Array Except Self · ✅ Encode/Decode Strings · ✅ Longest Consecutive Sequence
-**Gate probes** (fresh unseen mediums — NOT ladder items, do not count toward coverage): ✅ Subarray Sum Equals K (07-16, 22 min, 4-axis pure — narrated first, all 4 probe WHYs cold incl. the k=0 insert-order trap) → **1 more clean pass closes this gate.**
+**Gate probes** (fresh unseen mediums — NOT ladder items): ✅ Subarray Sum Equals K (07-16, 22 min, 4-axis pure) → **1 more clean pass closes this gate.**
 
 ### Two Pointers — gate NOT MET (probe pending)
 ✅ Valid Palindrome · ✅ Two Sum II · ✅ 3Sum · ✅ Container With Most Water
 
 ### Sliding Window — gate NOT MET
-✅ Best Time to Buy/Sell Stock (redo passed 06-30 — this line was stale, now fixed) · ✅ Longest Substring Without Repeating · `[x]*` Longest Repeating Character Replacement (code cold 6/6 twice; record-mechanism WHY → drill, card live) · ✅ Permutation in String · ~ **Minimum Window Substring — class-A redo DUE (07-09)**: the have/need O(1) check has never been produced cold · ~ Sliding Window Maximum (saw solution — class-A; DEFERRED by deliberate call: it opens the Queues topic)
+✅ Best Time to Buy/Sell Stock · ✅ Longest Substring Without Repeating · `[x]*` Longest Repeating Character Replacement (record-mechanism WHY → drill, card live) · ✅ Permutation in String · ~ **Minimum Window Substring — class-A redo: BOSS Wed 08-26** (have/need O(1) check never produced cold — open bounty) · ~ Sliding Window Maximum (class-A; DEFERRED by captain's call: it opens the Queues topic)
 
 ### Binary Search — gate NOT MET
-✅ Binary Search #704 (5/5, derivation-level) · `[x]*` Search a 2D Matrix (code 7/7 in 10 min; seam-weld WHY → drill, card live) · ~ **Koko Eating Bananas — class-A redo DUE 07-12** (`<` vs `<=` shipped wrong output) · `[x]*` Find Minimum in Rotated Sorted Array (07-16, 15 min — code cold + fuzz-clean 20,045 cases, keep/drop asymmetry nailed; narration skipped, 2 WHYs → drills, card live) · ⬜ **Search in Rotated Sorted Array ← next new** · (s) Median of Two Sorted Arrays (hard)
+✅ Binary Search #704 (5/5, derivation-level) · `[x]*` Search a 2D Matrix (seam-weld WHY → drill, card live) · ~ **Koko Eating Bananas — class-A redo: BOSS Mon 08-24** (`<` vs `<=` shipped wrong output — bounty rides this boss) · `[x]*` Find Minimum in Rotated Sorted Array (fuzz-clean 20,045 cases; 2 WHYs → drills, card live) · ⬜ **Search in Rotated Sorted Array ← Thu 08-27, closes the ladder** · (s) Median of Two Sorted Arrays (hard)
 
 ### Queues & Deques — gate: monotonic deque cold medium
 ✅ Implement Queue using Stacks (cleared via Stacks bridge) · ⬜ **Sliding Window Maximum — MUST OPEN THE TOPIC (class-A redo; no new deque problem before it)** · ⬜ Number of Recent Calls · ⬜ Design Circular Queue
@@ -140,14 +163,14 @@ Tier A ✅ NGE-II ✅ Daily Temperatures · Tier B ✅ Asteroid Collision ✅ Si
 ---
 
 ## CURRENT POSITION
-- **Today (Thu 2026-07-16) — TWO new problems, over the one/day norm, by explicit call:** ① Find Minimum in Rotated Sorted Array `[x]*` class-B, 15 min · ② **GATE PROBE: Subarray Sum Equals K `[x]` CLEAN, 22 min** — first gate movement all week. Debt deferred to the weekend by explicit call. ~37 min of the 2h cap.
-- **This week's gate probe is SPENT.** Next probe: next week, rotation moves A&H → Two Pointers.
-- **Class-A due: 2** (Koko — redo was due 07-12, 4d overdue · MWS — same) → WIP lock OFF (lock counts class-A only, threshold >3). ⚠️ At >5d overdue (i.e. from 07-18) Koko/MWS OPEN the session ahead of the new slot.
-- **Next problem (new slot, tomorrow — ONE, not a third today):** Search in Rotated Sorted Array — last Binary Search core item. No stub yet.
-- **Tomorrow (Fri 07-17) drills due — 4:** binary-search `< vs <=` infinite-loop (**HIGHEST — 2nd miss in a week**) · rotated-array left-vs-right decisiveness · S2DM seam-weld WHY · LRCR record-mechanism WHY. The last two were due 07-12 and are 5d late.
-- **SRS backlog: 23 cards due**, worst 8d overdue. Cap is ≤5/session, ≤30 min — drains over days, not in one sitting.
-- **This week:** finish Binary Search core (Search in Rotated) · first gate probe (fresh A&H medium) — **not yet started, 2 days left** · **Sat 07-18: BLIND SET #1 (recorded) + design calibration mock** · DSA calibration mock **still unbooked** (was "book today" on 07-12).
+- **Tue 2026-10-13 — Tier-3 restart, day 1 GREEN** (89-day gap; recovering from flu → MVD only). Audit s1 Blitz: Valid Parentheses ✅ · Contains Duplicate ✅ · Daily Temperatures ❌ Blank → Stage 1. Prediction sheet deferred. Comeback-week dates below are stale — re-spread once he's well; checkpoint re-baseline pending audit data.
+- **Wed 2026-10-14 — day 2 GREEN** (still recovering → MVD again). Blitz: Two Sum II 🟡 Okay (approach right; said "return values" not 1-based indices; elimination WHY generic — "left is the smallest partner" not produced) · Group Anagrams ✅ Strong (Stage 4) · Daily Temperatures ✅ Strong (Blank → Strong in 24h: decreasing-index invariant + pop rule + first-warmer WHY) → Stage 2, due 10-16. Extended (his call) to finish Audit s2: Longest Consecutive ✅ Strong (iterate-the-set trap flagged) · Product Except Self ✅ Strong (O(1) follow-up after one probe) · Trapping Rain Water 🟡 Okay (mechanics right; proof bridged to height[left] not leftMax — needs `leftMax < rightMax ≤ trueRightMax`). **Decay Audit verdicts: A&H family PASSES (3/3 Strong) · TP family PASSES on mechanics, WHY-precision soft (2 Okay)** → unsampled cards keep stage, re-spread 10-17…10-23 (one/day). Bosses wait until he's well.
+- **Class-A due: 2** — Koko (BOSS Mon 08-24) · MWS (BOSS Wed 08-26) — plus SWM deferred-by-call (opens Queues). WIP lock OFF (threshold >3).
+- **New slot:** carried by re-entry until **Thu 08-27 → Search in Rotated Sorted Array** closes Binary Search.
+- **Drills:** BS pair unblocks after Koko (Mon/Tue) · SW pair after MWS (Fri) · `< vs <=` bounty rides the Koko boss.
+- **This week's gate probe:** none (comeback week) — week 2's probe is Saturday's captain's call (A&H nearest-win vs TP rotation).
+- **Week objective:** "Comeback held: 2 bosses down, BS ladder CLOSED, first calibration datum on the board."
 - History & flags → `plans/LOG.md`.
 
-## How a problem is logged
-`[x]` cold · `[x]*` class-B (drill queued, card live) · `~` class-A (redo +3d, card suspended) · time taken · gate it feeds. Position advances on `[x]` and `[x]*`. Gates and blind sets count `[x]` only.
+## How a problem is logged (unchanged + preview marker)
+`[x]` cold · `[x]*` class-B (drill queued, card live) · `~` class-A (redo +3d, card suspended) · `(p)` preview, gate-neutral · time taken · gate it feeds. Position advances on `[x]` and `[x]*`. Gates and blind sets count pure `[x]` only.
