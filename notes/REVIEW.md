@@ -4,9 +4,9 @@
 
 | File | Problem | Tag | Stage | Review Date | Last Rating | Review Count | Graduated |
 |---|---|---|---|---|---|---|---|
-| simplify-path-solved.md | Simplify Path | simulation-stack | 4 | 2026-07-21 | Strong | 3 | No |
-| evaluate-reverse-polish-notation-solved.md | Evaluate Reverse Polish Notation | expression-parsing | 4 | 2026-07-22 | Strong | 3 | No |
-| daily-temperatures-solved.md | Daily Temperatures | monotonic-stack | 2 | 2026-10-16 | Strong | 6 | No |
+| simplify-path-solved.md | Simplify Path | simulation-stack | 5 | 2026-11-16 | Strong | 4 | No |
+| evaluate-reverse-polish-notation-solved.md | Evaluate Reverse Polish Notation | expression-parsing | 5 | 2026-11-17 | Strong | 4 | No |
+| daily-temperatures-solved.md | Daily Temperatures | monotonic-stack | 3 | 2026-10-21 | Strong | 7 | No |
 | asteroid-collision-solved.md | Asteroid Collision | simulation-stack | 4 | 2026-07-14 | Strong | 2 | No |
 | next-greater-element-ii-solved.md | Next Greater Element II | monotonic-stack | 4 | 2026-07-21 | Strong | 2 | No |
 | next-greater-element-i-solved.md | Next Greater Element I | monotonic-stack | 4 | 2026-07-12 | Strong | 1 | No |
@@ -38,7 +38,7 @@
 | binary-search-solved.md | Binary Search | binary-search / standard | 2 | 2026-07-08 | Strong | 1 | No |
 | remove-k-digits-solved.md | Remove K Digits | monotonic-stack / remove-k-to-minimize | 3 | 2026-07-11 | Strong | 1 | No |
 | search-a-2d-matrix-solved.md | Search a 2D Matrix | binary-search / 2d-matrix-flatten | 1 | 2026-07-14 | — | 0 | No |
-| koko-eating-bananas-solved.md | Koko Eating Bananas | binary-search / search-on-answer | 1 | SUSP → redo 2026-07-12 | — | 0 | No |
+| koko-eating-bananas-solved.md | Koko Eating Bananas | binary-search / search-on-answer | 1 | SUSP → redo 2026-10-19 | — | 0 | No |
 | remove-duplicate-letters-solved.md | Remove Duplicate Letters | monotonic-stack / lexicographic-smallest-keep-once | 2 | 2026-07-14 | — | 0 | No |
 | find-minimum-in-rotated-sorted-array-solved.md | Find Minimum in Rotated Sorted Array | binary-search / rotated-array-find-pivot | 1 | 2026-07-18 | — | 0 | No |
 | subarray-sum-equals-k-solved.md | Subarray Sum Equals K | hashing / prefix-sum-frequency | 2 | 2026-10-17 | — | 0 | No |
