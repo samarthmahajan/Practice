@@ -7,10 +7,10 @@ Pattern Tag: expression-parsing / single-pass-infix
 Status: ~ ASSISTED (hint → hint hint → hint hint hint → code). Redo cold 2026-06-25.
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-06-29
+- Stage: 5
+- Review Date: 2026-11-02
 - Last Rating: Strong
-- Review Count: 2
+- Review Count: 4
 - Graduated: No
 
 ---

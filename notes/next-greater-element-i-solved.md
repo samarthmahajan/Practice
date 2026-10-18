@@ -5,7 +5,7 @@ Pattern Tag: monotonic-stack
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-07-12
+- Review Date: 2026-10-26
 - Last Rating: Strong
 - Review Count: 1
 - Graduated: No

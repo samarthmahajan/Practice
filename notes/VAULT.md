@@ -3,7 +3,7 @@
 The trophy shelf and the highest-ROI pre-mock skim. One line per WHY, dated, only if produced unaided.
 Rules: a WHY enters only when produced cold (LOG.md is the evidence). Bounties are NAMED only — never spelled out here; claiming one = producing it cold at the redo/review/drill. Coach adds entries during audits and post-solves; never pre-writes the sentence.
 
-## Claimed (13)
+## Claimed (14)
 | # | Pattern | WHY (label — his words live in the card/LOG) | Claimed |
 |---|---|---|---|
 | 1 | sliding-window / running-min | BTBSS — "running min = cheapest buy so far" invariant + O(n)/O(1) | 2026-06-30 |
@@ -19,6 +19,7 @@ Rules: a WHY enters only when produced cold (LOG.md is the evidence). Bounties a
 | 11 | two-pointer / converging-ends | Two Sum II — elimination WHY produced unaided (closed the 07-05 3-probe gap) | 2026-07-11 |
 | 12 | binary-search / rotated-array-find-pivot | Find Minimum — keep/drop asymmetry nailed + fuzz-verified over 20,045 cases | 2026-07-16 |
 | 13 | binary-search / search-on-answer | Koko — feasibility is monotonic in k (works at k ⇒ works at any faster k), narrated before coding | 2026-10-16 |
+| 14 | hashing / index-map-swap-remove | Insert Delete GetRandom — invariant (value ↔ current index) + why each structure alone fails + why swap-with-last (middle remove shifts O(n)) + 1/n uniformity, all before coding; A&H gate-closing probe | 2026-10-18 |
 
 ## Open bounties (6) — name only, no answer text
 | Bounty | Pattern | Where it's claimed | Ref |

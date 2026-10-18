@@ -9,10 +9,10 @@ Pattern Tag: hashing / prefix-sum-frequency
      Not a curated-ladder item. Counts toward the A&H mastery gate: 1 pass / 1 attempt (gate needs 2 of last 3). -->
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-10-17
-- Last Rating: —
-- Review Count: 0
+- Stage: 3
+- Review Date: 2026-10-23
+- Last Rating: Strong
+- Review Count: 1
 - Graduated: No
 
 ---

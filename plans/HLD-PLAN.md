@@ -18,6 +18,8 @@ Until DSA's core coverage completes (Phase 3 start, ~mid-Oct), DSA owns weekday 
 **If a Phase-1 weekend collapses, that week's rep is DROPPED, not stacked** — Tier A/B systems reappear as Phase-3 redo material. No fantasy catch-up debt.
 
 ## Pipeline math (single source of truth for interview staging — PLAN.md points here)
+**Re-anchored 2026-10-18 (after the 89-day outage):** PLAN.md CP4 backstop is now **Sat 2027-01-23**; DSA core completes ~late Feb–Mar 2027, so Phase 3 (evening flip) slides with it. Every Oct/Sep date below is stale and reads as REP ORDER only — full HLD re-plan pending.
+
 **Re-anchored 2026-07-12, consistency-first:** staging keys off PLAN.md's checkpoints and apply trigger, not the calendar. Apply trigger = rolling blind-set ≥10/12 AND latest DSA + design mocks both "would advance" — **or the CP4 (Oct 31) backstop, whichever fires first.**
 - **Now → apply trigger:** warm referrers continuously — referrals beat cold applies and cost zero study time.
 - **Applications / outreach:** within one week of the trigger; **no later than Oct 31.** Warm-up companies first, dream companies 2–3 weeks behind them (screens as free calibration).

@@ -5,6 +5,7 @@
 array, prefix sum, sort, fill               → § ARRAY
 hashmap, frequency, computeifabsent         → § HASHMAP
 prefix sum + hashmap, subarray sum          → § HASHMAP              · subarray-sum-equals-k-solved.md
+index map, swap remove, getrandom o(1)      → § HASHMAP              · insert-delete-getrandom-o1-solved.md
 two pointer, opposite ends, slow fast       → § TWO POINTER
 sliding window, variable, fixed, anagram    → § SLIDING WINDOW
 intervals, merge, overlap, meeting rooms    → § INTERVALS

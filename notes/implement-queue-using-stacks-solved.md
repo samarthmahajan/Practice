@@ -5,7 +5,7 @@ Pattern Tag: stack / amortized-two-stack
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-07-20
+- Review Date: 2026-10-30
 - Last Rating: Strong
 - Review Count: 3
 - Graduated: No

@@ -58,6 +58,28 @@ for (int num : nums) {
     result += prefixCount.getOrDefault(sum - k, 0);
     prefixCount.merge(sum, 1, Integer::sum);
 }
+
+// Index map + swap-with-last removal (O(1) insert / remove / getRandom)
+// Invariant: idx.get(list.get(i)) == i for every i
+List<Integer> list = new ArrayList<>();
+Map<Integer, Integer> idx = new HashMap<>();             // value -> current index
+boolean insert(int val) {
+    if (idx.containsKey(val)) return false;
+    idx.put(val, list.size());
+    list.add(val);
+    return true;
+}
+boolean remove(int val) {
+    if (!idx.containsKey(val)) return false;
+    int i = idx.get(val);
+    int last = list.get(list.size() - 1);
+    list.set(i, last);                                   // move last into the hole
+    idx.put(last, i);                                    // BEFORE idx.remove(val) — val may be last
+    list.remove(list.size() - 1);                        // int overload = by index, O(1)
+    idx.remove(val);
+    return true;
+}
+int getRandom() { return list.get(random.nextInt(list.size())); }
 ```
 
 ⚠️ Watch out: `getOrDefault` with a new list does NOT store it — use `computeIfAbsent` when you need to add to the list afterward.

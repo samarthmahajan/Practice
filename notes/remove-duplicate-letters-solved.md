@@ -5,7 +5,7 @@ Pattern Tag: monotonic-stack / lexicographic-smallest-keep-once
 
 ## SRS Tracking
 - Stage: 2
-- Review Date: 2026-07-14
+- Review Date: 2026-10-28
 - Last Rating: —
 - Review Count: 0
 - Graduated: No

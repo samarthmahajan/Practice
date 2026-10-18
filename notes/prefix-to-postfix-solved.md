@@ -5,7 +5,7 @@ Pattern Tag: expression-parsing
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-07-21
+- Review Date: 2026-11-03
 - Last Rating: Strong
 - Review Count: 1
 - Graduated: No

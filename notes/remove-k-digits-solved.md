@@ -5,7 +5,7 @@ Pattern Tag: monotonic-stack / remove-k-to-minimize
 
 ## SRS Tracking
 - Stage: 3
-- Review Date: 2026-07-11
+- Review Date: 2026-10-27
 - Last Rating: Strong
 - Review Count: 1
 - Graduated: No
