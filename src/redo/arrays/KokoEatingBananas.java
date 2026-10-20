@@ -16,9 +16,11 @@ public class KokoEatingBananas {
 
     public int minEatingSpeed(int[] piles, int h) {
         // your solution here
+
         int max = Arrays.stream(piles).parallel().max().getAsInt();
 
-        int left = 0, right = max , ans = max;
+        int left = 1, right = max , ans = max;
+
         while (left<= right){
             int mid = left + (right - left) / 2;
             long totalHours = 0;
@@ -33,6 +35,7 @@ public class KokoEatingBananas {
                 left = mid + 1;
         }
         return ans;
+
     }
 
     public static void main(String[] args) {

@@ -15,15 +15,15 @@
 | prefix-to-postfix-solved.md | Prefix to Postfix | expression-parsing | 4 | 2026-11-03 | Strong | 1 | No |
 | decode-string-solved.md | Decode String | simulation-stack | 5 | 2026-11-02 | Strong | 6 | No |
 | basic-calculator-ii-solved.md | Basic Calculator II | expression-parsing | 5 | 2026-11-02 | Strong | 4 | No |
-| largest-rectangle-in-histogram-solved.md | Largest Rectangle in Histogram | monotonic-stack | 1 | 2026-10-19 | Blank | 5 | No |
+| largest-rectangle-in-histogram-solved.md | Largest Rectangle in Histogram | monotonic-stack | 2 | 2026-10-22 | Strong | 6 | No |
 | trapping-rain-water-solved.md | Trapping Rain Water | two-pointer / converging-max | 4 | 2026-11-04 | Okay | 3 | No |
 | implement-queue-using-stacks-solved.md | Implement Queue using Stacks | stack / amortized-two-stack | 4 | 2026-10-30 | Strong | 3 | No |
 | contains-duplicate-solved.md | Contains Duplicate | hashing / set-membership | 5 | 2026-11-14 | Strong | 2 | No |
 | valid-anagram-solved.md | Valid Anagram | hashing / frequency-count | 5 | 2026-11-02 | Strong | 4 | No |
 | group-anagrams-solved.md | Group Anagrams | hashing / group-by-canonical-key | 4 | 2026-10-29 | Strong | 5 | No |
-| top-k-frequent-elements-solved.md | Top K Frequent Elements | bucket-sort / top-k-frequency | 3 | 2026-10-19 | Strong | 2 | No |
+| top-k-frequent-elements-solved.md | Top K Frequent Elements | bucket-sort / top-k-frequency | 5 | 2026-11-04 | Strong | 3 | No |
 | product-of-array-except-self-solved.md | Product of Array Except Self | arrays / prefix-suffix-product | 4 | 2026-10-29 | Strong | 4 | No |
-| encode-decode-strings-solved.md | Encode and Decode Strings | encoding / length-prefix | 3 | 2026-10-20 | Strong | 3 | No |
+| encode-decode-strings-solved.md | Encode and Decode Strings | encoding / length-prefix | 5 | 2026-11-04 | Strong | 4 | No |
 | longest-consecutive-sequence-solved.md | Longest Consecutive Sequence | hashing / set-membership | 4 | 2026-10-29 | Strong | 4 | No |
 | valid-palindrome-solved.md | Valid Palindrome | two-pointer / converging-ends | 2 | 2026-10-21 | Okay | 1 | No |
 | two-sum-ii-solved.md | Two Sum II - Input Array Is Sorted | two-pointer / converging-ends | 3 | 2026-10-24 | Okay | 3 | No |
@@ -38,7 +38,7 @@
 | binary-search-solved.md | Binary Search | binary-search / standard | 2 | 2026-07-08 | Strong | 1 | No |
 | remove-k-digits-solved.md | Remove K Digits | monotonic-stack / remove-k-to-minimize | 3 | 2026-10-27 | Strong | 1 | No |
 | search-a-2d-matrix-solved.md | Search a 2D Matrix | binary-search / 2d-matrix-flatten | 1 | 2026-07-14 | — | 0 | No |
-| koko-eating-bananas-solved.md | Koko Eating Bananas | binary-search / search-on-answer | 1 | SUSP → redo 2026-10-19 | — | 0 | No |
+| koko-eating-bananas-solved.md | Koko Eating Bananas | binary-search / search-on-answer | 1 | SUSP → redo 2026-10-23 | — | 0 | No |
 | remove-duplicate-letters-solved.md | Remove Duplicate Letters | monotonic-stack / lexicographic-smallest-keep-once | 2 | 2026-10-28 | — | 0 | No |
 | find-minimum-in-rotated-sorted-array-solved.md | Find Minimum in Rotated Sorted Array | binary-search / rotated-array-find-pivot | 1 | 2026-07-18 | — | 0 | No |
 | subarray-sum-equals-k-solved.md | Subarray Sum Equals K | hashing / prefix-sum-frequency | 3 | 2026-10-23 | Strong | 1 | No |

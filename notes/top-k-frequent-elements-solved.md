@@ -6,10 +6,10 @@ Solved Date: 2026-06-24
 Pattern Tag: bucket-sort / top-k-frequency
 
 ## SRS Tracking
-- Stage: 3
-- Review Date: 2026-10-19
+- Stage: 5
+- Review Date: 2026-11-04
 - Last Rating: Strong
-- Review Count: 2
+- Review Count: 3
 - Graduated: No
 
 ---

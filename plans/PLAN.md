@@ -18,12 +18,12 @@ DSA only. HLD → `plans/HLD-PLAN.md` (its Phase-3 evening-flip date slides with
 ## PROGRESS — the scoreboard (coach updates every session; morning hook leads with this)
 | Signal | Now (2026-10-18) | Target |
 |---|---|---|
-| Streak / recovery | Tier-3 restart 10-13 · 5 of 6 days non-zero (10-17 unlogged) · last outage: **89d** (07-16 → 10-13) · next lapse must recover in <4 days | never 0 two days running |
+| Streak / recovery | Tier-3 restart 10-13 · 6 of 8 days non-zero (10-17 unlogged · 10-19 Tier 0, recovered in 1d) · last outage: **89d** (07-16 → 10-13) · next lapse must recover in <4 days | never 0 two days running |
 | Mastery gates | **1/5 · 🟢 A&H GREEN (10-18, 2/2 clean)** · next green gate → book a human mock that day | all green |
 | Ladder coverage | Stacks ██████████ · A&H ██████████ 🟢 · TP ██████████ · SW ████████░░ 4/6 · BS █████████░ 4/5 · rest ⬜ | 100% |
 | Blind sets recorded | 0 · **first datum: Sat 10-24 calibration half-set (1M/1H, blameless)** | rolling ≥10/12 |
 | Human mocks | 0 · booking is now **trigger-based: 2 gates green → book that day** (standing "book today" items rot — removed) | last 2 per track "would advance" |
-| Assets (only go up) | **39 cards banked · 23 cold redos run, 18 passed (78%) · 3 ladders at 100% · 1 gate green · Vault: 14 WHYs claimed · Decay Audit: A&H 3/3, Stacks 4/5 Strong after ~100 days** | grows every week |
+| Assets (only go up) | **39 cards banked · 24 cold redos run, 18 passed (75%) · 3 ladders at 100% · 1 gate green · Vault: 14 WHYs claimed · Decay Audit: A&H 3/3, Stacks 4/5 Strong after ~100 days** | grows every week |
 | Self-rated confidence | **60% (10-18)** · prev 10% (07-12) · evidence today: 1/5 gates, 0 blind sets, 0 mocks — Saturday's half-set is the first check | tracked against evidence |
 | Next checkpoint | **CP-R (restart check) — Sat 2026-10-31** | restart held: ≥10/14 non-zero days |
 
@@ -108,12 +108,13 @@ Tier A ✅ NGE-II ✅ Daily Temperatures · Tier B ✅ Asteroid Collision ✅ Si
 
 ### Two Pointers — gate NOT MET (probe #1: Fri 10-23)
 ✅ Valid Palindrome · ✅ Two Sum II · ✅ 3Sum · ✅ Container With Most Water
+**Gate probes:** ~ Boats to Save People #881 (10-20, class-A wrong output — 6,191/20,000 fuzz fails, e.g. [1,1,1,1] lim 2 → 1 vs 2; narration said "right moves every time" but code didn't; WHYs not produced before coding; time not given) → 0/1. Redo cold slotted at Sun 10-25 retro.
 
 ### Sliding Window — gate NOT MET
 ✅ Best Time to Buy/Sell Stock · ✅ Longest Substring Without Repeating · `[x]*` Longest Repeating Character Replacement (record-mechanism WHY → drill, card live) · ✅ Permutation in String · ~ **Minimum Window Substring — class-A redo: BOSS Thu 10-22** (have/need O(1) check never produced cold — open bounty) · ~ Sliding Window Maximum (class-A; DEFERRED by captain's call: it opens the Queues topic)
 
 ### Binary Search — gate NOT MET
-✅ Binary Search #704 (5/5, derivation-level) · `[x]*` Search a 2D Matrix (seam-weld WHY → drill, card live) · ~ **Koko Eating Bananas — class-A redo: BOSS Mon 10-19** (07-12: `<` vs `<=` wrong output · 10-16: both WHYs narrated cold, but coded `left = 0` → `/ by zero` whenever answer is 1 — 9,841/20,000 fuzz crashes) · `[x]*` Find Minimum in Rotated Sorted Array (fuzz-clean 20,045 cases; 2 WHYs → drills, card live) · ⬜ **Search in Rotated Sorted Array ← Tue 10-20, closes the ladder** · (s) Median of Two Sorted Arrays (hard)
+✅ Binary Search #704 (5/5, derivation-level) · `[x]*` Search a 2D Matrix (seam-weld WHY → drill, card live) · ~ **Koko Eating Bananas — class-A redo: BOSS Fri 10-23** (07-12: `<` vs `<=` wrong output · 10-16: both WHYs narrated cold, but coded `left = 0` → `/ by zero` whenever answer is 1 — 9,841/20,000 fuzz crashes · 10-20: narration complete incl. `lo = 1` WHY, coded `left = 0` again → 4,947/20,000 crashes, 30 min) · `[x]*` Find Minimum in Rotated Sorted Array (fuzz-clean 20,045 cases; 2 WHYs → drills, card live) · ⬜ **Search in Rotated Sorted Array ← Tue 10-20, closes the ladder** · (s) Median of Two Sorted Arrays (hard)
 
 ### Queues & Deques — gate: monotonic deque cold medium
 ✅ Implement Queue using Stacks (cleared via Stacks bridge) · ⬜ **Sliding Window Maximum — MUST OPEN THE TOPIC (class-A redo; no new deque problem before it)** · ⬜ Number of Recent Calls · ⬜ Design Circular Queue
@@ -156,11 +157,13 @@ Tier A ✅ NGE-II ✅ Daily Temperatures · Tier B ✅ Asteroid Collision ✅ Si
 - **Thu 2026-10-15 — day 3, non-zero (partial).** Warm start Simplify Path ✅ Strong (Stage 5; first Stacks audit sample). Koko boss presented but NOT started — headache, stopped before the timer. Boss rolls to Fri 10-16, no penalty. Stub decision pending: old 07-12 attempt sits at src/redo/arrays/KokoEatingBananas.java (rename-to-.bak recommended).
 - **Fri 2026-10-16 — day 4 GREEN.** Warm start Eval RPN ✅ Strong (Stage 5; Stacks audit 2/2). **Koko boss → `~` class-A:** narrated monotonic-feasibility WHY + `<=` WHY cold before coding (Vault #13; `< vs <=` bounty half-claimed), then coded `left = 0` against his own narrated range [1, max] → `/ by zero` on every answer-1 input (fuzz: 0 wrong / 9,841 crashed of 20,000). Root cause self-diagnosed in one line. Redo cold Mon 10-19, card stays SUSP. Daily Temperatures ✅ Strong — full invariant + first-warmer WHY UNPROMPTED (needed a probe on 10-14) → Stage 3, due 10-21. Old attempt kept at src/redo/arrays/KokoEatingBananas_0712.java.bak.
 - **Sun 2026-10-18 — day 6 GREEN · 🟢 A&H GATE GREEN (1/5).** (Sat 10-17 unlogged.) Captain's call 1/2: probe → A&H. Warm start Valid Anagram ✅ Strong → Stage 5 (11-02). **Gate probe #380 Insert Delete GetRandom `[x]` 20 min**, fuzz-clean; post-code follow-up on swapped put/remove order needed a forced trace (gate-neutral) → 4/5, Stage 2, due 10-21. Remaining today: SRS (SSEK + ≤3 Stacks Blitz) → retro (re-spread Stacks, re-baseline checkpoints, purge RE-ENTRY) → optional STAR #1.
-- **Class-A due: 2** — Koko (BOSS Mon 10-19) · MWS (next boss — Hard, 45' box) — plus SWM deferred-by-call (opens Queues). WIP lock OFF (threshold >3).
+- **Mon 2026-10-19 — zero day (Tier 0, his call: "not in mood").** Nothing logged; normal protocol resumed 10-20.
+- **Tue 2026-10-20 — GREEN.** Warm start Encode/Decode ✅ Strong → 3→5 fast-track, 11-04. **Koko boss → `~` class-A again (30 min):** narrated monotonic WHY + `<=` WHY + `lo = 1` / `hi = max` WHYs + O(n log M) — all cold, all correct — then coded `left = 0` → fuzz 15,053 ok / 0 wrong / 4,947 crashed. Fixed to `left = 1` only after seeing the crash (20,000/20,000) — doesn't change the class. He affirmed written from scratch (body matched the 10-16 .bak verbatim — accepted, flag on record). No self-written edge tests. Redo Fri 10-23 with the **boundary read-back ritual** (before first run: read every init/bound constant aloud against the narration).
+- **Class-A due: 2** — MWS (BOSS Thu 10-22 — Hard, 45' box) · Koko (BOSS Fri 10-23) — plus SWM deferred-by-call (opens Queues). WIP lock OFF (threshold >3).
 - Retro 10-18: Stacks Decay Audit PASS (4/5 Strong; Largest Rectangle Blank → Stage 1, due 10-19) · 8 Stacks cards re-spread 10-25→11-04 · checkpoints re-baselined (CP-R 10-31 · CP3 11-28 · CP4 2027-01-23) · RE-ENTRY section purged · confidence 60%.
-- **Week of 10-19:** Mon Koko boss (+ Largest Rectangle Full review) · Tue **Search in Rotated Sorted Array** (NEW slot, closes BS) https://leetcode.com/problems/search-in-rotated-sorted-array/ · Wed light — BS drills + BS audit · Thu **MWS boss** (H, 45') · Fri **TP gate probe #1** · Sat **calibration half-set** (1M/1H) · Sun retro + STAR #1 if not done. SWM boss (opens Queues) the week after.
-- **Drills:** BS pair unblocks after Koko (Wed, ≤2/day) · SW pair after MWS (Fri) · `< vs <=` bounty rides the Koko boss.
-- **Gate probes:** A&H 🟢 closed 10-18 · next: TP probe #1 Fri 10-23 (rotation resumes TP → Stacks → SW → BS). **2nd green gate → book a human mock that day.**
+- **Week of 10-19 (re-sequenced 10-20 — captain's call 1/2: TP probe swaps Fri → Wed, since BS is contamination-blocked until Koko clears):** ~~Wed TP probe~~ → **ran Tue 10-20 in the empty NEW slot (coach's call, delegated "u decide") — missed** · Wed **light: STAR #1 or rest** (BS still contamination-blocked) · Thu **MWS boss** (H, 45') · Fri **Koko boss** · Sat **calibration half-set** (1M/1H) · Sun retro + STAR #1. **Search in Rotated Sorted Array** (closes BS) https://leetcode.com/problems/search-in-rotated-sorted-array/ → Mon 10-26, or Fri after a Koko pass if energy allows (CP-R needs BS closed by 10-31). SWM boss (opens Queues) after that.
+- **Drills:** BS pair unblocks after Koko passes · SW pair after MWS · `< vs <=` bounty rides the Koko boss.
+- **Gate probes:** A&H 🟢 closed 10-18 · next: TP probe #1 Wed 10-21 (rotation resumes TP → Stacks → SW → BS). **2nd green gate → book a human mock that day.**
 - **Week objective (10-19):** "Two bosses down, BS CLOSED, first blind-set datum on the board."
 - History & flags → `plans/LOG.md`.
 
