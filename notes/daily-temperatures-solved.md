@@ -4,10 +4,10 @@ Solved Date: 2026-06-21
 Pattern Tag: monotonic-stack
 
 ## SRS Tracking
-- Stage: 3
-- Review Date: 2026-10-21
+- Stage: 5
+- Review Date: 2026-11-05
 - Last Rating: Strong
-- Review Count: 7
+- Review Count: 8
 - Graduated: No
 
 ---

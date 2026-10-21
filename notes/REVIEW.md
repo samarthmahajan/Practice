@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|---|---|
 | simplify-path-solved.md | Simplify Path | simulation-stack | 5 | 2026-11-16 | Strong | 4 | No |
 | evaluate-reverse-polish-notation-solved.md | Evaluate Reverse Polish Notation | expression-parsing | 5 | 2026-11-17 | Strong | 4 | No |
-| daily-temperatures-solved.md | Daily Temperatures | monotonic-stack | 3 | 2026-10-21 | Strong | 7 | No |
+| daily-temperatures-solved.md | Daily Temperatures | monotonic-stack | 5 | 2026-11-05 | Strong | 8 | No |
 | asteroid-collision-solved.md | Asteroid Collision | simulation-stack | 4 | 2026-10-25 | Strong | 2 | No |
 | next-greater-element-ii-solved.md | Next Greater Element II | monotonic-stack | 4 | 2026-11-04 | Strong | 2 | No |
 | next-greater-element-i-solved.md | Next Greater Element I | monotonic-stack | 4 | 2026-10-26 | Strong | 1 | No |
