@@ -5,9 +5,9 @@ Pattern Tag: hashing / index-map-swap-remove
 
 ## SRS Tracking
 - Stage: 2
-- Review Date: 2026-10-21
-- Last Rating: —
-- Review Count: 0
+- Review Date: 2026-10-24
+- Last Rating: Okay
+- Review Count: 1
 - Graduated: No
  
 ---
@@ -89,6 +89,7 @@ getRandom():
 - `list.remove(list.size() - 1)` — the `int` overload removes by INDEX. Passing an `Integer` silently calls remove-by-object: O(n) and possibly the wrong element.
 - Never `list.remove(index)` from the middle — O(n) shift AND every shifted element's map index goes stale.
 - Follow-up (2026-10-18): first answer traced the CORRECT order and called it inconsistent; got it right on a forced trace of the swapped order. Re-test this at review.
+- Review (2026-10-21): code + invariant + correct-order trace + O(1)/O(n) all cold and correct; the SWAPPED-order failure (ghost entry) was asked 3× and never produced → Okay. Next review's FIRST prompt: trace the swapped order on remove(30) of [10,20,30] and name what breaks.
 
 ## Dry Run 
 Start: list = [10, 20, 30], map = {10:0, 20:1, 30:2} → remove(20)

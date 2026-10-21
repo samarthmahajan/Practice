@@ -25,7 +25,7 @@
 | product-of-array-except-self-solved.md | Product of Array Except Self | arrays / prefix-suffix-product | 4 | 2026-10-29 | Strong | 4 | No |
 | encode-decode-strings-solved.md | Encode and Decode Strings | encoding / length-prefix | 5 | 2026-11-04 | Strong | 4 | No |
 | longest-consecutive-sequence-solved.md | Longest Consecutive Sequence | hashing / set-membership | 4 | 2026-10-29 | Strong | 4 | No |
-| valid-palindrome-solved.md | Valid Palindrome | two-pointer / converging-ends | 2 | 2026-10-21 | Okay | 1 | No |
+| valid-palindrome-solved.md | Valid Palindrome | two-pointer / converging-ends | 3 | 2026-10-26 | Strong | 2 | No |
 | two-sum-ii-solved.md | Two Sum II - Input Array Is Sorted | two-pointer / converging-ends | 3 | 2026-10-24 | Okay | 3 | No |
 | 3sum-solved.md | 3Sum | two-pointer / triplet-dedup | 3 | 2026-10-23 | Strong | 2 | No |
 | container-with-most-water-solved.md | Container With Most Water | two-pointer / converging-ends | 2 | 2026-10-22 | Strong | 1 | No |
@@ -42,4 +42,4 @@
 | remove-duplicate-letters-solved.md | Remove Duplicate Letters | monotonic-stack / lexicographic-smallest-keep-once | 2 | 2026-10-28 | — | 0 | No |
 | find-minimum-in-rotated-sorted-array-solved.md | Find Minimum in Rotated Sorted Array | binary-search / rotated-array-find-pivot | 1 | 2026-07-18 | — | 0 | No |
 | subarray-sum-equals-k-solved.md | Subarray Sum Equals K | hashing / prefix-sum-frequency | 3 | 2026-10-23 | Strong | 1 | No |
-| insert-delete-getrandom-o1-solved.md | Insert Delete GetRandom O(1) | hashing / index-map-swap-remove | 2 | 2026-10-21 | — | 0 | No |
+| insert-delete-getrandom-o1-solved.md | Insert Delete GetRandom O(1) | hashing / index-map-swap-remove | 2 | 2026-10-24 | Okay | 1 | No |
