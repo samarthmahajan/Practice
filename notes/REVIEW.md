@@ -28,12 +28,12 @@
 | valid-palindrome-solved.md | Valid Palindrome | two-pointer / converging-ends | 3 | 2026-10-26 | Strong | 2 | No |
 | two-sum-ii-solved.md | Two Sum II - Input Array Is Sorted | two-pointer / converging-ends | 3 | 2026-10-24 | Okay | 3 | No |
 | 3sum-solved.md | 3Sum | two-pointer / triplet-dedup | 3 | 2026-10-23 | Strong | 2 | No |
-| container-with-most-water-solved.md | Container With Most Water | two-pointer / converging-ends | 2 | 2026-10-22 | Strong | 1 | No |
+| container-with-most-water-solved.md | Container With Most Water | two-pointer / converging-ends | 3 | 2026-10-27 | Strong | 2 | No |
 | best-time-to-buy-and-sell-stock-solved.md | Best Time to Buy and Sell Stock | sliding-window / running-min | 3 | 2026-07-11 | Strong | 2 | No |
 | longest-substring-without-repeating-solved.md | Longest Substring Without Repeating Characters | sliding-window / variable-shrink | 2 | 2026-07-08 | Strong | 1 | No |
 | longest-repeating-character-replacement-solved.md | Longest Repeating Character Replacement | sliding-window / max-frequency-window | 1 | 2026-07-14 | — | 0 | No |
 | permutation-in-string-solved.md | Permutation in String | sliding-window / fixed-window-anagram | 2 | 2026-07-08 | Strong | 1 | No |
-| minimum-window-substring-solved.md | Minimum Window Substring | sliding-window / variable-window-cover | 2 | SUSP → redo 2026-07-12 | — | 0 | No |
+| minimum-window-substring-solved.md | Minimum Window Substring | sliding-window / variable-window-cover | 3 | 2026-10-27 | Strong | 1 | No |
 | sliding-window-maximum-solved.md | Sliding Window Maximum | monotonic-deque / window-max | 1 | SUSP → redo (opens Queues topic) | — | 0 | No |
 | binary-search-solved.md | Binary Search | binary-search / standard | 2 | 2026-07-08 | Strong | 1 | No |
 | remove-k-digits-solved.md | Remove K Digits | monotonic-stack / remove-k-to-minimize | 3 | 2026-10-27 | Strong | 1 | No |

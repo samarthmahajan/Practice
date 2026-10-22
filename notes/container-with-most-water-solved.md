@@ -6,13 +6,14 @@ Solved Date: 2026-06-28
 Pattern Tag: two-pointer / converging-ends
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-10-22
+- Stage: 3
+- Review Date: 2026-10-27
 - Last Rating: Strong
-- Review Count: 1
+- Review Count: 2
 - Graduated: No
 
 > Note: logged `~` ASSISTED. Code was cold, optimal, bug-free on first run; recognition was cold. BUT the governing-invariant WHY ("the short wall has already achieved its max possible area at the current widest span") was coach-supplied during the dry run, not produced cold. Redo cold 2026-07-01 — flips to `[x]` only when the WHY is stated unaided.
+> 2026-10-22 review: governing WHY produced COLD and unaided, before code (Vault #15).
 
 ---
 

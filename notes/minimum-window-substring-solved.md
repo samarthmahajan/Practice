@@ -6,16 +6,18 @@ Solved Date: 2026-06-29
 Pattern Tag: sliding-window / variable-window-cover
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-07-02
-- Last Rating: —
-- Review Count: 0
+- Stage: 3
+- Review Date: 2026-10-27
+- Last Rating: Strong
+- Review Count: 1
 - Graduated: No
 
 ---
 
 # Real World Analogy
 - A shopping list (t) and a receipt tape (s): slide a window across the tape, growing right until your basket holds everything on the list, then trimming the left edge as far as possible while the basket still satisfies the list — recording the shortest such stretch.
+
+> 2026-10-22 class-A redo PASSED `[x]` — 45 min (Hard box), unaided, fuzz 20,000/20,000. have/need rule (`--need[c]==0` → have++, `++need[d]==1` → have--) + duplicate trap + own edge tests + bestLen=MAX guard narrated BEFORE coding (Vault #16, bounty closed).
 
 ## Core Insight
 Grow the right edge until the window covers all of `t`; then shrink the left edge while it still covers `t`, recording the smallest valid window. Validity = every required char's remaining-need is satisfied.
